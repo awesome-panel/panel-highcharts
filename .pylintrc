@@ -1,0 +1,20 @@
+[MASTER]
+load-plugins=pylint.extensions.mccabe
+extension-pkg-whitelist: cx_Oracle
+
+[FORMAT]
+max-line-length=100
+
+[MESSAGES CONTROL]
+# bad-continuation: Pylint cannot handle valid indendation created by Black
+# duplicate-code: The _current_event and _past_event have some similar code. But it's ok.
+disable=bad-continuation,duplicate-code
+
+
+[DESIGN]
+max-parents=13
+
+[TYPECHECK]
+generated-members=REQUEST,acl_users,aq_parent,"[a-zA-Z]+_set{1,2}",save,delete
+ignored-modules=winreg
+

@@ -1,0 +1,12 @@
+{
+  "name": "panel_highcharts",
+  "version": "0.0.1",
+  "description": "HighCharts extensions for Panel",
+  "license": "BSD-3-Clause",
+  "keywords": [],
+  "repository": {},
+  "dependencies": {
+    "@bokeh/bokehjs": "^2.3.0"
+  },
+  "devDependencies": {}
+}

@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Custom ignore
+panel_highcharts/node_modules
+test_results
