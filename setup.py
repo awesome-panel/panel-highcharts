@@ -1,4 +1,5 @@
 """Setup file for the Awesome Panel Extensions"""
+import pathlib
 from typing import List
 
 import setuptools
@@ -6,6 +7,9 @@ import setuptools
 # I only want to include a short README with a focus on the package
 with open("README.md", "r") as fh:
     long_description = fh.read()
+
+ROOT = pathlib.Path.cwd()
+VERSION = (ROOT / "VERSION").read_text().strip()
 
 install_requires = [
     "panel>=0.11.1",
@@ -25,6 +29,7 @@ _tests = [
     "pytest-cov",
     "rope",
     "twine",
+    "wheel",
 ]
 
 _examples = [
@@ -45,8 +50,9 @@ extras_require["all"] = sorted(set(sum(extras_require.values(), [])))
 
 setuptools.setup(
     name="panel-highcharts",
-    version="20210326.3",
-    description="A python package enabling you to use HighCharts with HoloViz Panel.",
+    version=VERSION,
+    description="""A python package enabling you to use HighCharts with Jupyter, HoloViz Panel and
+    the rest of the tools you know and love""",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Marc Skov Madsen",

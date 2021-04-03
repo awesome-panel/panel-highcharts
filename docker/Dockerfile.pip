@@ -1,0 +1,6 @@
+FROM python:3.8.9-slim-buster
+
+RUN pip install pip --upgrade
+RUN pip install panel-highcharts
+
+ENTRYPOINT ["bash"]

@@ -131,3 +131,4 @@ dmypy.json
 # Custom ignore
 panel_highcharts/node_modules
 test_results
+!panel_highcharts/dist

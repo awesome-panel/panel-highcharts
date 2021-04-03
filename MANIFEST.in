@@ -1,0 +1,8 @@
+graft panel_highcharts/dist
+include panel_highcharts/*.json
+include panel_highcharts/models/*.ts
+include panel_highcharts/index.ts
+include README.md
+global-exclude *.ipynb_checkpoints/*
+global-exclude *.py[co]
+global-exclude *~
