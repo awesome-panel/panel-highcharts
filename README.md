@@ -4,17 +4,7 @@ THIS IS APLHA SOFTWARE. I BELIEVE THINGS WORK, BUT THE PACKAGE NEEDS TO BE USED 
 
 The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a [Panel](https://panel.holoviz.org) Web App.
 
-<div align="center" style="margin-right:10%;margin-left:10%; max-height: 250px" >
-    <a href="https://panel.holoviz.org"><img
-    alt="Panel"
-    src="https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel_logo.png"
-    style="max-width:40%;height:255px;margin-right:20px"></a>
-    <a href="https://www.highcharts.com/blog/products/highcharts/"><img
-    alt="HighCharts"
-    src="https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/highcharts_logo.png"
-    style="max-width:40%;height:200px"
-    ></a>
-</div>
+![Panel HighCharts Logo](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel_logo.png)
 
 ## License
 
@@ -61,7 +51,7 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 
 - [HighChart Reference Guide](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighChart.ipynb)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples%2FHighChart.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighChart.ipynb)
 
 https://github.com/marcskovmadsen/panel-highcharts/blob/HEAD/examples/HighChart.ipynb
 
