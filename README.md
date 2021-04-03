@@ -1,6 +1,6 @@
 # 📈 Panel HighCharts
 
-THIS IS APLHA SOFTWARE. I BELIEVE THINGS WORK, BUT THE PACKAGE NEEDS TO BE USED TO TELL. AND USAGE MIGHT ALSO CHANGE THE API.
+THIS IS APLHA SOFTWARE. I BELIEVE THINGS WORK, BUT THE PACKAGE NEEDS TO BE USED TO TELL. AND USAGE MIGHT ALSO CHANGE THE API. DOES CURRENTLY ONLY WORK IN JUPYTER LAB AND PANEL APP - NOT JUPYTER NOTEBOOK!
 
 The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a [Panel](https://panel.holoviz.org) Web App.
 
@@ -59,10 +59,22 @@ https://github.com/marcskovmadsen/panel-highcharts/blob/HEAD/examples/HighChart.
 
 - [Networkgraph](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Network.ipynb)
 
+
+## Additional Resources
+
+You can find more inspiration via the links below.
+
+- [Highcharts](https://www.highcharts.com/blog/products/highcharts/)
+  - [Demos](https://www.highcharts.com/demo)
+  - [API docs](https://api.highcharts.com/highcharts/)
+- [Panel](https://panel.holoviz.org)
+- [Awesome Panel](https://awesome-panel.org)
+
 ## Roadmap
 
 When I get the time I would like to
 
+- Get it working in Jupyter Notebook (Works in Jupyter Lab and Panel app).
 - Deploy to Binder
 - Add more examples
 - Add some apps for Binder via jupyter-server-proxy
