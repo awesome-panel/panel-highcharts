@@ -1,0 +1,3 @@
+-e .
+-e binder/jupyter-panel-highcharts-server/.
+jupyter-server-proxy
