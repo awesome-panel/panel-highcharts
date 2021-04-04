@@ -1,6 +1,6 @@
-# 📈 Panel HighCharts
+# &#128200; Panel HighCharts
 
-THIS IS APLHA SOFTWARE. I BELIEVE THINGS WORK, BUT THE PACKAGE NEEDS TO BE USED TO TELL. AND USAGE MIGHT ALSO CHANGE THE API. DOES CURRENTLY ONLY WORK IN JUPYTER LAB AND PANEL APP - NOT JUPYTER NOTEBOOK!
+THIS IS APLHA SOFTWARE. I BELIEVE THINGS WORK, BUT THE PACKAGE NEEDS TO BE USED TO TELL. AND USAGE MIGHT ALSO CHANGE THE API.
 
 The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a [Panel](https://panel.holoviz.org) Web App.
 
@@ -59,6 +59,7 @@ https://github.com/marcskovmadsen/panel-highcharts/blob/HEAD/examples/HighChart.
 
 - [Networkgraph](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Network.ipynb)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/Network.ipynb)
 
 ## Additional Resources
 
@@ -74,8 +75,6 @@ You can find more inspiration via the links below.
 
 When I get the time I would like to
 
-- Get it working in Jupyter Notebook (Works in Jupyter Lab and Panel app).
-- Deploy to Binder
 - Add more examples
 - Add some apps for Binder via jupyter-server-proxy
 - Add badges for 100% test coverage etc.
@@ -84,7 +83,9 @@ When I get the time I would like to
 - Support [HighMap](https://www.highcharts.com/demo/maps)
 - Support [HighGantt](https://www.highcharts.com/blog/products/gantt/)
 - Support [HighEditor](https://www.highcharts.com/products/highcharts-editor/)
+- Support pandas `.plot` api via method as `highplot` on dataframes
 
 ## Change Log
 
-- 20210403: First Release to PyPi
+- 20210404: Can now display in Classic Notebook
+- 20210403: First Release to PyPi. Works in Jupyter Lab and Panel App.

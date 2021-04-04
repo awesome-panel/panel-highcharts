@@ -23,7 +23,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
     highcharts_funnel: bool = False,
     highcharts_heatmap: bool = False,
     highcharts_more: bool = False,
-    highcharts_network: bool = False,
+    highcharts_networkgraph: bool = False,
     highcharts_no_data: bool = False,
     highcharts_offline_exporting: bool = False,
     highcharts_solid_gauge: bool = False,
@@ -47,7 +47,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_funnel (bool, optional): Defaults to False.
         highcharts_heatmap (bool, optional): Defaults to False.
         highcharts_more (bool, optional): Defaults to False.
-        highcharts_network (bool, optional): Defaults to False.
+        highcharts_networkgraph (bool, optional): Defaults to False.
         highcharts_no_data (bool, optional): Defaults to False.
         highcharts_offline_exporting (bool, optional): Defaults to False.
         highcharts_solid_gauge (bool, optional): Defaults to False.
@@ -70,7 +70,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_funnel=highcharts_funnel,
         highcharts_heatmap=highcharts_heatmap,
         highcharts_more=highcharts_more,
-        highcharts_network=highcharts_network,
+        highcharts_networkgraph=highcharts_networkgraph,
         highcharts_no_data=highcharts_no_data,
         highcharts_offline_exporting=highcharts_offline_exporting,
         highcharts_solid_gauge=highcharts_solid_gauge,

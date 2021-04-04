@@ -29,14 +29,14 @@ def test_js_files(backup_js_files):  # pylint: disable=unused-argument
 
 def test_js_files_network(backup_js_files):  # pylint: disable=unused-argument
     # When
-    HighChart.js_files(highcharts_network=True)
+    HighChart.js_files(highcharts_networkgraph=True)
     # Then
     assert "https://code.highcharts.com/modules/networkgraph.js" in HighChart.__javascript__
     # pylint: disable=unsubscriptable-object
     assert (
-        "https://code.highcharts.com/modules/networkgraph.js" in HighChart.__js_skip__["highchart"]
+        "https://code.highcharts.com/modules/networkgraph.js" in HighChart.__js_skip__["highcharts"]
     )
     assert (
-        HighChart.__js_require__["paths"]["highcharts-network"]
-        == "https://code.highcharts.com/modules/networkgraph.js"
+        HighChart.__js_require__["paths"]["highcharts/modules/networkgraph"]
+        == "https://code.highcharts.com/modules/networkgraph"
     )
