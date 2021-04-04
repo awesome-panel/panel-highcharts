@@ -2,7 +2,9 @@
 Function to configure serving the panel example apps via jupyter-server-proxy.
 """
 from glob import glob
+import pathlib
 
+ICON_PATH = str((pathlib.Path(__file__).parent / "panel-highcharts-apps-icon.svg").absolute())
 
 def panel_serve_examples():
     """Returns the jupyter-server-proxy configuration for serving the example notebooks as Panel
@@ -29,6 +31,7 @@ def panel_serve_examples():
         "timeout": 360,
         "launcher_entry": {
             "enabled": True,
-            "title": "Panel HighChart Apps",
+            "title": "Panel Highcharts Apps",
+            "icon_path": ICON_PATH,
         },
     }
