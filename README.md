@@ -92,7 +92,7 @@ You can find more inspiration via the links below.
 
 When I get the time I would like to
 
-- Support pandas `.plot` api via method as `highplot` on dataframes
+- Support pandas `.plot` api via method as `.highplot` on dataframes
 - Add more examples
 - Add badges for 100% test coverage etc.
 - Distribute as conda package
