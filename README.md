@@ -96,9 +96,9 @@ When I get the time I would like to
 - Add more examples
 - Add badges for 100% test coverage etc.
 - Distribute as conda package
-- Support [HighEditor](https://www.highcharts.com/products/highcharts-editor/)
 
 ## Change Log
 
+- 20210405: Add HighStock, HighMap, HighGantt
 - 20210404: Can now display in Classic Notebook
 - 20210403: First Release to PyPi. Works in Jupyter Lab and Panel App.
