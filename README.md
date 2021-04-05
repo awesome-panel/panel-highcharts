@@ -65,6 +65,14 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighStock.ipynb)
 
+- [HighMap](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighMap.ipynb)
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighMap.ipynb)
+
+- [HighGantt](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighGantt.ipynb)
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighGantt.ipynb)
+
 ## Examples
 
 - [Networkgraph](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Network.ipynb)
@@ -75,9 +83,8 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 
 You can find more inspiration via the links below.
 
-- [Highcharts](https://www.highcharts.com/blog/products/highcharts/)
+- [Highcharts](https://www.highcharts.com)
   - [Demos](https://www.highcharts.com/demo)
-  - [API docs](https://api.highcharts.com/highcharts/)
 - [Panel](https://panel.holoviz.org)
 - [Awesome Panel](https://awesome-panel.org)
 
@@ -85,8 +92,6 @@ You can find more inspiration via the links below.
 
 When I get the time I would like to
 
-- Support [HighMap](https://www.highcharts.com/demo/maps)
-- Support [HighGantt](https://www.highcharts.com/blog/products/gantt/)
 - Support pandas `.plot` api via method as `highplot` on dataframes
 - Add more examples
 - Add badges for 100% test coverage etc.
