@@ -1,14 +1,15 @@
-"""Contains the Bokeh Model for the HighChart pane"""
+"""Contains the Bokeh Model for the HighGantt pane"""
 from collections import OrderedDict
 
 from .highbase import PATH_HIGH_CHARTS, PATH_REQUIRE_HIGH_CHARTS, PATHS, HighBase
 
 
-class HighChart(HighBase):
-    """The Bokeh Model for the HighChart pane"""
+class HighGantt(HighBase):
+    """The Bokeh Model for the HighGantt pane"""
 
     __javascript__ = [
         "https://code.highcharts.com/highcharts.js",
+        "https://code.highcharts.com/modules/gantt.js",
         "https://code.highcharts.com/modules/export-data.js",
         "https://code.highcharts.com/modules/exporting.js",
     ]
@@ -23,11 +24,13 @@ class HighChart(HighBase):
         ],
         "paths": {
             "highcharts": "https://code.highcharts.com",
+            "highcharts/modules/gantt": "https://code.highcharts.com/modules/gantt",
             "highcharts/modules/exporting": "https://code.highcharts.com/modules/exporting",
             "highcharts/modules/export-data": "https://code.highcharts.com/modules/export-data",
         },
         "exports": {
             "highcharts": "Highcharts",
+            "highcharts/modules/gantt": None,
             "highcharts/modules/exporting": None,
             "highcharts/modules/export-data": None,
         },
@@ -45,15 +48,10 @@ class HighChart(HighBase):
         highcharts_drilldown: bool = False,
         highcharts_export_data: bool = True,
         highcharts_exporting: bool = True,
-        highcharts_funnel: bool = False,
-        highcharts_heatmap: bool = False,
         highcharts_more: bool = False,
         highcharts_networkgraph: bool = False,
         highcharts_no_data: bool = False,
         highcharts_offline_exporting: bool = False,
-        highcharts_solid_gauge: bool = False,
-        highcharts_3d: bool = False,
-        highcharts_treemap: bool = False,
     ):
         """Configures the js files to include from https://code.highcharts.com
 
@@ -69,19 +67,14 @@ class HighChart(HighBase):
             highcharts_drilldown (bool, optional): Defaults to False.
             highcharts_export_data (bool, optional): Defaults to True.
             highcharts_exporting (bool, optional): Defaults to True.
-            highcharts_funnel (bool, optional): Defaults to False.
-            highcharts_heatmap (bool, optional): Defaults to False.
             highcharts_more (bool, optional): Defaults to False.
             highcharts_networkgraph (bool, optional): Defaults to False.
             highcharts_no_data (bool, optional): Defaults to False.
             highcharts_offline_exporting (bool, optional): Defaults to False.
-            highcharts_solid_gauge (bool, optional): Defaults to False.
-            highcharts_3d (bool, optional): Defaults to False.
-            highcharts_treemap (bool, optional): Defaults to False.
         """
         paths = OrderedDict()
         include = {
-            "highcharts-3d": highcharts_3d,
+            "highcharts/modules/gantt": True,
             "highcharts-more": highcharts_more,
             "highcharts/modules/accessibility": highcharts_accessibility,
             "highcharts/modules/annotations": highcharts_annotations,
@@ -92,19 +85,16 @@ class HighChart(HighBase):
             "highcharts/modules/drilldown": highcharts_drilldown,
             "highcharts/modules/export-data": highcharts_export_data,
             "highcharts/modules/exporting": highcharts_exporting,
-            "highcharts/modules/funnel": highcharts_funnel,
-            "highcharts/modules/heatmap": highcharts_heatmap,
             "highcharts/modules/networkgraph": highcharts_networkgraph,
             "highcharts/modules/no-data": highcharts_no_data,
             "highcharts/modules/offline-exporting": highcharts_offline_exporting,
-            "highcharts/modules/solid-gauge": highcharts_solid_gauge,
-            "highcharts/modules/treemap": highcharts_treemap,
         }
         for key, value in include.items():
             if value:
                 paths[key] = PATHS[key]
 
         cls.__javascript__ = [PATH_HIGH_CHARTS] + list(paths.values())
+
         cls.__js_require__["paths"] = {
             "highcharts": PATH_REQUIRE_HIGH_CHARTS,
             **{k: v[:-3] for k, v in paths.items()},

@@ -4,4 +4,4 @@
 - the HighChart pane to use the Highcharts Chart in Panel.
 """
 from . import config
-from .highchart import HighChart
+from .charts import HighChart, HighGantt, HighMap, HighStock

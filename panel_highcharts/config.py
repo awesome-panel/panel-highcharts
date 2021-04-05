@@ -2,11 +2,16 @@
 
 - panel_highcharts.config.js_files to define which Highcharts js files to include
 """
+from typing import List, Optional
+
 from panel import extension
 
-# Enables using pn.extension("highchart")
+# Enables using pn.extension("highchart", ...)
 # pylint: disable=protected-access
 extension._imports["highchart"] = "panel_highcharts.models.highchart"
+extension._imports["highstock"] = "panel_highcharts.models.highstock"
+extension._imports["highmap"] = "panel_highcharts.models.highmap"
+extension._imports["highgantt"] = "panel_highcharts.models.highgantt"
 # pylint: enable=protected-access
 
 
@@ -29,6 +34,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
     highcharts_solid_gauge: bool = False,
     highcharts_3d: bool = False,
     highcharts_treemap: bool = False,
+    mapdata: Optional[List[str]] = None,
 ):
     """Configures the js files to include from https://code.highcharts.com
 
@@ -56,6 +62,9 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
     """
     # pylint: disable=import-outside-toplevel
     from .models.highchart import HighChart
+    from .models.highgantt import HighGantt
+    from .models.highmap import HighMap
+    from .models.highstock import HighStock
 
     HighChart.js_files(
         highcharts_accessibility=highcharts_accessibility,
@@ -76,4 +85,51 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_solid_gauge=highcharts_solid_gauge,
         highcharts_3d=highcharts_3d,
         highcharts_treemap=highcharts_treemap,
+    )
+
+    HighStock.js_files(
+        highcharts_accessibility=highcharts_accessibility,
+        highcharts_annotations=highcharts_annotations,
+        highcharts_boost=highcharts_boost,
+        highcharts_broken_axis=highcharts_broken_axis,
+        highcharts_canvas_tools=highcharts_canvas_tools,
+        highcharts_data=highcharts_data,
+        highcharts_drilldown=highcharts_drilldown,
+        highcharts_export_data=highcharts_export_data,
+        highcharts_exporting=highcharts_exporting,
+        highcharts_more=highcharts_more,
+        highcharts_no_data=highcharts_no_data,
+        highcharts_offline_exporting=highcharts_offline_exporting,
+        highcharts_solid_gauge=highcharts_solid_gauge,
+    )
+
+    HighMap.js_files(
+        highcharts_accessibility=highcharts_accessibility,
+        highcharts_annotations=highcharts_annotations,
+        highcharts_boost=highcharts_boost,
+        highcharts_broken_axis=highcharts_broken_axis,
+        highcharts_canvas_tools=highcharts_canvas_tools,
+        highcharts_data=highcharts_data,
+        highcharts_drilldown=highcharts_drilldown,
+        highcharts_export_data=highcharts_export_data,
+        highcharts_exporting=highcharts_exporting,
+        highcharts_more=highcharts_more,
+        highcharts_no_data=highcharts_no_data,
+        highcharts_offline_exporting=highcharts_offline_exporting,
+        mapdata=mapdata,
+    )
+
+    HighGantt.js_files(
+        highcharts_accessibility=highcharts_accessibility,
+        highcharts_annotations=highcharts_annotations,
+        highcharts_boost=highcharts_boost,
+        highcharts_broken_axis=highcharts_broken_axis,
+        highcharts_canvas_tools=highcharts_canvas_tools,
+        highcharts_data=highcharts_data,
+        highcharts_drilldown=highcharts_drilldown,
+        highcharts_export_data=highcharts_export_data,
+        highcharts_exporting=highcharts_exporting,
+        highcharts_more=highcharts_more,
+        highcharts_no_data=highcharts_no_data,
+        highcharts_offline_exporting=highcharts_offline_exporting,
     )

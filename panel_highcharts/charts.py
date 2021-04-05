@@ -7,8 +7,8 @@ from pyviz_comms import JupyterComm
 from . import config  # pylint: disable=unused-import
 
 
-class HighChart(PaneBase):
-    """A Panel HighChart pane"""
+class HighChartBase(PaneBase):
+    """A Base Panel HighChart pane"""
 
     # Events: https://api.highcharts.com/highcharts/plotOptions.series.point.events
     object = param.Dict(
@@ -27,6 +27,9 @@ class HighChart(PaneBase):
 
     _updates = True
 
+    _model_module = "panel_highcharts.models.highchart"
+    _model = "HighChart"
+
     @classmethod
     def applies(cls, obj):
         if isinstance(obj, (dict, string_types)):
@@ -35,7 +38,7 @@ class HighChart(PaneBase):
 
     def _get_model(self, doc, root=None, parent=None, comm=None):
         _BkHighChart = lazy_load(  # pylint: disable=invalid-name
-            "panel_highcharts.models.highchart", "HighChart", isinstance(comm, JupyterComm)
+            self._model_module, self._model, isinstance(comm, JupyterComm)
         )
         props = self._process_param_change(self._init_params())
         if not "config_update" in props:
@@ -56,3 +59,31 @@ class HighChart(PaneBase):
 
     def _update(self, ref=None, model=None):
         model.update(config=self.object, config_update=self.object_update)
+
+
+class HighChart(HighChartBase):
+    """A Panel HighChart pane"""
+
+    _model_module = "panel_highcharts.models.highchart"
+    _model = "HighChart"
+
+
+class HighStock(HighChartBase):
+    """A Panel HighStock pane"""
+
+    _model_module = "panel_highcharts.models.highstock"
+    _model = "HighStock"
+
+
+class HighMap(HighChartBase):
+    """A Panel HighMap pane"""
+
+    _model_module = "panel_highcharts.models.highmap"
+    _model = "HighMap"
+
+
+class HighGantt(HighChartBase):
+    """A Panel HighGantt pane"""
+
+    _model_module = "panel_highcharts.models.highgantt"
+    _model = "HighGantt"

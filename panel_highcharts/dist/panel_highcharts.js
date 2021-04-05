@@ -44,20 +44,46 @@
 "0896b22af1": /* index.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
     const tslib_1 = require("tslib");
-    const HighChartsExtensions = tslib_1.__importStar(require("3e9dd62cf5") /* ./models/ */);
+    const HighChartsExtensions = tslib_1.__importStar(require("3c0c5c52d0") /* ./models/ */);
     exports.HighChartsExtensions = HighChartsExtensions;
     const base_1 = require("@bokehjs/base");
     base_1.register_models(HighChartsExtensions);
 },
-"3e9dd62cf5": /* models\index.js */ function _(require, module, exports, __esModule, __esExport) {
+"3c0c5c52d0": /* models\index.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    var highchart_1 = require("7c98d48d47") /* ./highchart */;
+    var highchart_1 = require("df31ad65ef") /* ./highchart */;
     __esExport("HighChart", highchart_1.HighChart);
+    var highstock_1 = require("60e97661a4") /* ./highstock */;
+    __esExport("HighStock", highstock_1.HighStock);
+    var highmap_1 = require("6d1e48a659") /* ./highmap */;
+    __esExport("HighMap", highmap_1.HighMap);
+    var highgantt_1 = require("dd1f1d4ad4") /* ./highgantt */;
+    __esExport("HighGantt", highgantt_1.HighGantt);
 },
-"7c98d48d47": /* models\highchart.js */ function _(require, module, exports, __esModule, __esExport) {
+"df31ad65ef": /* models\highchart.js */ function _(require, module, exports, __esModule, __esExport) {
+    __esModule();
+    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    class HighChartView extends highbase_1.HighBaseView {
+        create_chart(wn, el, config) {
+            return wn.Highcharts.chart(el, config);
+        }
+    }
+    exports.HighChartView = HighChartView;
+    HighChartView.__name__ = "HighChartView";
+    class HighChart extends highbase_1.HighBase {
+        static init_HighChart() {
+            this.prototype.default_view = HighChartView;
+        }
+    }
+    exports.HighChart = HighChart;
+    HighChart.__name__ = "HighChart";
+    HighChart.__module__ = "panel_highcharts.models.highchart";
+    HighChart.init_HighChart();
+},
+"cf1d910579": /* models\highbase.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
     const html_box_1 = require("@bokehjs/models/layouts/html_box");
-    class HighChartView extends html_box_1.HTMLBoxView {
+    class HighBaseView extends html_box_1.HTMLBoxView {
         connect_signals() {
             super.connect_signals();
             this.connect(this.model.properties.config.change, this.render);
@@ -71,11 +97,14 @@
             const wn = window;
             if (wn.Highcharts) {
                 const config = this._clean_config(this.model.config);
-                this.chart = wn.Highcharts.chart(this.el, config);
+                this.chart = this.create_chart(wn, this.el, config);
             }
             else {
                 console.error("HighCharts .js is not loaded. Could not create chart");
             }
+        }
+        create_chart(wn, el, config) {
+            return wn.Highcharts.stockChart(el, config);
         }
         after_layout() {
             super.after_layout();
@@ -95,14 +124,14 @@
             return config;
         }
     }
-    exports.HighChartView = HighChartView;
-    HighChartView.__name__ = "HighChartView";
-    class HighChart extends html_box_1.HTMLBox {
+    exports.HighBaseView = HighBaseView;
+    HighBaseView.__name__ = "HighBaseView";
+    class HighBase extends html_box_1.HTMLBox {
         constructor(attrs) {
             super(attrs);
         }
-        static init_HighChart() {
-            this.prototype.default_view = HighChartView;
+        static init_HighBase() {
+            this.prototype.default_view = HighBaseView;
             this.define(({ Any }) => ({
                 config: [Any],
                 config_update: [Any],
@@ -114,10 +143,10 @@
             });
         }
     }
-    exports.HighChart = HighChart;
-    HighChart.__name__ = "HighChart";
-    HighChart.__module__ = "panel_highcharts.models.highchart";
-    HighChart.init_HighChart();
+    exports.HighBase = HighBase;
+    HighBase.__name__ = "HighBase";
+    HighBase.__module__ = "panel_highcharts.models.highbase";
+    HighBase.init_HighBase();
     // https://api.highcharts.com/highcharts/plotOptions.series.point.events.mouseOver
     function updateJS(config, model) {
         if (config === null) {
@@ -129,7 +158,7 @@
             if (typeof value == "object") {
                 updateJS(value, model);
             }
-            else if (typeof value === "string") {
+            else if (typeof value === "string" && value !== "") {
                 if (value[0].charAt(0) === "@") {
                     const eventKey = value.slice(1, value.length);
                     config[key] = (event) => sendEvent(event, model, eventKey);
@@ -198,5 +227,65 @@
         });
     }
 },
-}, "0896b22af1", {"index":"0896b22af1","models/index":"3e9dd62cf5","models/highchart":"7c98d48d47"}, {});});
+"60e97661a4": /* models\highstock.js */ function _(require, module, exports, __esModule, __esExport) {
+    __esModule();
+    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    class HighStockView extends highbase_1.HighBaseView {
+        create_chart(wn, el, config) {
+            return wn.Highcharts.stockChart(el, config);
+        }
+    }
+    exports.HighStockView = HighStockView;
+    HighStockView.__name__ = "HighStockView";
+    class HighStock extends highbase_1.HighBase {
+        static init_HighStock() {
+            this.prototype.default_view = HighStockView;
+        }
+    }
+    exports.HighStock = HighStock;
+    HighStock.__name__ = "HighStock";
+    HighStock.__module__ = "panel_highcharts.models.highstock";
+    HighStock.init_HighStock();
+},
+"6d1e48a659": /* models\highmap.js */ function _(require, module, exports, __esModule, __esExport) {
+    __esModule();
+    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    class HighMapView extends highbase_1.HighBaseView {
+        create_chart(wn, el, config) {
+            return wn.Highcharts.mapChart(el, config);
+        }
+    }
+    exports.HighMapView = HighMapView;
+    HighMapView.__name__ = "HighMapView";
+    class HighMap extends highbase_1.HighBase {
+        static init_HighMap() {
+            this.prototype.default_view = HighMapView;
+        }
+    }
+    exports.HighMap = HighMap;
+    HighMap.__name__ = "HighMap";
+    HighMap.__module__ = "panel_highcharts.models.highmap";
+    HighMap.init_HighMap();
+},
+"dd1f1d4ad4": /* models\highgantt.js */ function _(require, module, exports, __esModule, __esExport) {
+    __esModule();
+    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    class HighGanttView extends highbase_1.HighBaseView {
+        create_chart(wn, el, config) {
+            return wn.Highcharts.ganttChart(el, config);
+        }
+    }
+    exports.HighGanttView = HighGanttView;
+    HighGanttView.__name__ = "HighGanttView";
+    class HighGantt extends highbase_1.HighBase {
+        static init_HighGantt() {
+            this.prototype.default_view = HighGanttView;
+        }
+    }
+    exports.HighGantt = HighGantt;
+    HighGantt.__name__ = "HighGantt";
+    HighGantt.__module__ = "panel_highcharts.models.highgantt";
+    HighGantt.init_HighGantt();
+},
+}, "0896b22af1", {"index":"0896b22af1","models/index":"3c0c5c52d0","models/highchart":"df31ad65ef","models/highbase":"cf1d910579","models/highstock":"60e97661a4","models/highmap":"6d1e48a659","models/highgantt":"dd1f1d4ad4"}, {});});
 //# sourceMappingURL=panel_highcharts.js.map

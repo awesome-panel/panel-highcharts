@@ -55,13 +55,15 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 
 ![Basic Example](assets/images/panel-highcharts-basic-example.png)
 
-## Reference Guide
+## Reference Guides
 
-- [HighChart Reference Guide](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighChart.ipynb)
+- [HighChart](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighChart.ipynb)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighChart.ipynb)
 
-https://github.com/marcskovmadsen/panel-highcharts/blob/HEAD/examples/HighChart.ipynb
+- [HighStock](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighStock.ipynb)
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighStock.ipynb)
 
 ## Examples
 
@@ -83,14 +85,13 @@ You can find more inspiration via the links below.
 
 When I get the time I would like to
 
+- Support [HighMap](https://www.highcharts.com/demo/maps)
+- Support [HighGantt](https://www.highcharts.com/blog/products/gantt/)
+- Support pandas `.plot` api via method as `highplot` on dataframes
 - Add more examples
 - Add badges for 100% test coverage etc.
 - Distribute as conda package
-- Support [HighStock](https://www.highcharts.com/demo/stock)
-- Support [HighMap](https://www.highcharts.com/demo/maps)
-- Support [HighGantt](https://www.highcharts.com/blog/products/gantt/)
 - Support [HighEditor](https://www.highcharts.com/products/highcharts-editor/)
-- Support pandas `.plot` api via method as `highplot` on dataframes
 
 ## Change Log
 
