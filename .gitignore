@@ -132,3 +132,4 @@ dmypy.json
 panel_highcharts/node_modules
 test_results
 !panel_highcharts/dist
+.vscode
