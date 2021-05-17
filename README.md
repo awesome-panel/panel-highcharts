@@ -79,6 +79,10 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/Network.ipynb)
 
+- [PackedBubble](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/PackedBubble.ipynb)
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/PackedBubble.ipynb)
+
 ## Additional Resources
 
 You can find more inspiration via the links below.
