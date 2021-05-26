@@ -6,7 +6,7 @@
 
 # &#128200; Panel HighCharts
 
-The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a HoloViz [Panel](https://panel.holoviz.org) Web App.
+The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a [HoloViz Panel](https://panel.holoviz.org) Web App.
 
 Check out the `panel-highcharts` examples on **Binder** or the article [Highly Interactive Data Visualization](https://towardsdatascience.com/highly-interactive-data-visualization-cd3a9b082370).
 
@@ -18,7 +18,7 @@ Check out the `panel-highcharts` examples on **Binder** or the article [Highly I
 
 ## 🏁 Background
 
-This project was started because a colleague of mine loves to use HighCharts for his analytics trading apps. As there was no really easy way of using HighCharts in Python, Notebooks or Panel, it would be difficult for me, my team and our traders to collaborate. So I created this package as a in my spare time as an open source project to share with the world.
+This project was started because a colleague of mine loves to use HighCharts for his analytics trading apps. As there was no really easy way of using HighCharts in Python, Notebooks or Panel, it would be difficult for me, my team and our traders to collaborate. So I created this package in my spare time as an open source project to share with the world.
 
 ## ⚖️ License
 
