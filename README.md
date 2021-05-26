@@ -18,7 +18,7 @@ Check out the `panel-highcharts` examples on **Binder**
 
 ## 🏁 Background
 
-This project was started because a colleague of mine loves to use HighCharts for his analytics trading apps. As there was no really easy way of using HighCharts in Python, Notebooks or Panel, it would be difficult for me, my team and our traders to collaborate. So I created this package as a private, open source project to share with the world.
+This project was started because a colleague of mine loves to use HighCharts for his analytics trading apps. As there was no really easy way of using HighCharts in Python, Notebooks or Panel, it would be difficult for me, my team and our traders to collaborate. So I created this package as a in my spare time as an open source project to share with the world.
 
 ## ⚖️ License
 
