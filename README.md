@@ -8,7 +8,7 @@
 
 The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a HoloViz [Panel](https://panel.holoviz.org) Web App.
 
-Check out the `panel-highcharts` examples on **Binder**
+Check out the `panel-highcharts` examples on **Binder** or the article [Highly Interactive Data Visualization](https://towardsdatascience.com/highly-interactive-data-visualization-cd3a9b082370) on Towards DataScience.
 
 | Jupyter Notebook | Jupyter Labs | Panel Apps |
 | - | - | - |
