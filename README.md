@@ -77,12 +77,12 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 
 ## 💡 Inspiration
 
-You can find more information and inspiration via
+You can find more inspiration via
 
-- [Towards Data Science - Highly Interactive Data Visualization](https://towardsdatascience.com/highly-interactive-data-visualization-cd3a9b082370)
-- [Highcharts](https://www.highcharts.com), [Demos](https://www.highcharts.com/demo)
-- [Panel](https://panel.holoviz.org)
 - [Awesome Panel](https://awesome-panel.org)
+- [Highcharts](https://www.highcharts.com), [Demos](https://www.highcharts.com/demo)
+- [Highly Interactive Data Visualization](https://towardsdatascience.com/highly-interactive-data-visualization-cd3a9b082370)
+- [Panel](https://panel.holoviz.org)
 
 ## 🛣️ Roadmap
 
