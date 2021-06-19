@@ -45,6 +45,7 @@ export class HighBaseView extends HTMLBoxView {
     _add_series(): void {
       if (this.chart){
         const conf = this.model._add_series
+        conf.options = this._clean_config(conf.options)
         this.chart.addSeries(conf.options, conf.redraw, conf.animation)
       }
     }
