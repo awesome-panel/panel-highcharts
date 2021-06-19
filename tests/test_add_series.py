@@ -68,7 +68,7 @@ def test_add_series():
 
 def test_get_add_series_app():
     """Tests the .add_series method of HighChart"""
-    chart = ph.HighChart(object=CONFIGURATION, sizing_mode="stretch_both", height=400)
+    chart = ph.HighChart(object=CONFIGURATION, sizing_mode="stretch_both", height=800)
 
     button = pn.widgets.Button(name="Add Series")
 
