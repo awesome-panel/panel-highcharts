@@ -5,7 +5,7 @@ from typing import List
 import setuptools
 
 # I only want to include a short README with a focus on the package
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 ROOT = pathlib.Path.cwd()

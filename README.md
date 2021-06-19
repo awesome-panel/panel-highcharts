@@ -14,7 +14,9 @@ Check out the `panel-highcharts` examples on **Binder** or the article [Highly I
 | - | - | - |
 | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel) |
 
-[![Panel HighChart Reference Example](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/assets/images/panel-highcharts-binder.gif?raw=true)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighChart.ipynb)
+[<img src="https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-binder.gif" alt="Panel HighChart Reference Example" style="max-width:100%;">](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighChart.ipynb)
+
+
 
 ## 🏁 Background
 
@@ -57,7 +59,7 @@ configuration = {
 ph.HighChart(object=configuration, sizing_mode="stretch_width")
 ```
 
-![Basic Example](assets/images/panel-highcharts-basic-example.png)
+![Basic Example](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-basic-example.png)
 
 ### 👩‍🏫 Reference Guides
 
@@ -96,6 +98,8 @@ When I get the time I would like to
 
 ## 📰 Change Log
 
+- 20210619: Add add_series method
+- 20210517: Add PackedBubble example
 - 20210405: Add HighStock, HighMap, HighGantt
 - 20210404: Can now display in Classic Notebook
 - 20210403: First Release to PyPi. Works in Jupyter Lab and Panel App.
