@@ -62,7 +62,7 @@
 },
 "df31ad65ef": /* models\highchart.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    const highbase_1 = require("29e6f5fcd3") /* ./highbase */;
     class HighChartView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.chart(el, config);
@@ -80,7 +80,7 @@
     HighChart.__module__ = "panel_highcharts.models.highchart";
     HighChart.init_HighChart();
 },
-"cf1d910579": /* models\highbase.js */ function _(require, module, exports, __esModule, __esExport) {
+"29e6f5fcd3": /* models\highbase.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
     const html_box_1 = require("@bokehjs/models/layouts/html_box");
     class HighBaseView extends html_box_1.HTMLBoxView {
@@ -88,6 +88,7 @@
             super.connect_signals();
             this.connect(this.model.properties.config.change, this.render);
             this.connect(this.model.properties.config_update.change, this._handle_config_update_change);
+            this.connect(this.model.properties._add_series.change, this._add_series);
         }
         render() {
             super.render();
@@ -115,6 +116,13 @@
                 this.chart.reflow();
             }
         }
+        _add_series() {
+            if (this.chart) {
+                const conf = this.model._add_series;
+                console.log(conf.options, conf.redraw, conf.animation);
+                this.chart.addSeries(conf.options, conf.redraw, conf.animation);
+            }
+        }
         _handle_config_update_change() {
             const config_update = this._clean_config(this.model.config_update);
             this.chart.update(config_update);
@@ -136,6 +144,7 @@
                 config: [Any],
                 config_update: [Any],
                 event: [Any],
+                _add_series: [Any],
             }));
             this.override({
                 height: 400,
@@ -229,7 +238,7 @@
 },
 "60e97661a4": /* models\highstock.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    const highbase_1 = require("29e6f5fcd3") /* ./highbase */;
     class HighStockView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.stockChart(el, config);
@@ -249,7 +258,7 @@
 },
 "6d1e48a659": /* models\highmap.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    const highbase_1 = require("29e6f5fcd3") /* ./highbase */;
     class HighMapView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.mapChart(el, config);
@@ -269,7 +278,7 @@
 },
 "dd1f1d4ad4": /* models\highgantt.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("cf1d910579") /* ./highbase */;
+    const highbase_1 = require("29e6f5fcd3") /* ./highbase */;
     class HighGanttView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.ganttChart(el, config);
@@ -287,5 +296,5 @@
     HighGantt.__module__ = "panel_highcharts.models.highgantt";
     HighGantt.init_HighGantt();
 },
-}, "0896b22af1", {"index":"0896b22af1","models/index":"3c0c5c52d0","models/highchart":"df31ad65ef","models/highbase":"cf1d910579","models/highstock":"60e97661a4","models/highmap":"6d1e48a659","models/highgantt":"dd1f1d4ad4"}, {});});
+}, "0896b22af1", {"index":"0896b22af1","models/index":"3c0c5c52d0","models/highchart":"df31ad65ef","models/highbase":"29e6f5fcd3","models/highstock":"60e97661a4","models/highmap":"6d1e48a659","models/highgantt":"dd1f1d4ad4"}, {});});
 //# sourceMappingURL=panel_highcharts.js.map

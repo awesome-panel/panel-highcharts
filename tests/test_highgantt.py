@@ -51,7 +51,7 @@ def convert_to_miliseconds(value):
     return int((s_dt - EPOCH).total_seconds() * 1000)
 
 
-for point in CONFIG["series"][0]["data"]: # type: ignore
+for point in CONFIG["series"][0]["data"]:  # type: ignore
     point["start"] = convert_to_miliseconds(point["start"])
     point["end"] = convert_to_miliseconds(point["end"])
 

@@ -45,6 +45,7 @@ class HighBase(LayoutDOM):
 
     config = Nullable(Dict(String, Any))
     config_update = Nullable(Dict(String, Any))
+    _add_series = Nullable(Dict(String, Any))
 
     # Events
     event = Nullable(Dict(String, Any))

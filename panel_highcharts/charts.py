@@ -1,4 +1,6 @@
 """The HighChart pane enables you to use the Highchart chart in Panel """
+from typing import Dict
+
 import param
 from panel.pane.base import PaneBase
 from panel.util import lazy_load, string_types
@@ -20,6 +22,8 @@ class HighChartBase(PaneBase):
     object_update = param.Dict(doc="""Incremental change to the initial user configuration.""")
 
     event = param.Dict(doc="""Events raised by the chart""", readonly=True)
+
+    _add_series = param.Dict(doc="""Transfer the arguments of the add_series method""")
 
     priority = None
 
@@ -59,6 +63,22 @@ class HighChartBase(PaneBase):
 
     def _update(self, ref=None, model=None):
         model.update(config=self.object, config_update=self.object_update)
+
+    def add_series(self, options: Dict, redraw: bool = True, animation: bool = True):
+        """Adds the seried specified by the options
+
+        C.f. https://api.highcharts.com/class-reference/Highcharts.Chart#addSeries
+
+        Args:
+            options (Dict): The config options for the series.
+            redraw (bool, optional): Whether to redraw the chart after adding. Defaults to True.
+            animation (bool, optional): Whether to apply animation. Defaults to True.
+        """
+        self._add_series = {
+            "options": options,
+            "redraw": redraw,
+            "animation": animation,
+        }
 
 
 class HighChart(HighChartBase):

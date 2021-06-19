@@ -9,6 +9,7 @@ export class HighBaseView extends HTMLBoxView {
       super.connect_signals()
       this.connect(this.model.properties.config.change, this.render)
       this.connect(this.model.properties.config_update.change, this._handle_config_update_change)
+      this.connect(this.model.properties._add_series.change, this._add_series)
     }
 
     render(): void {
@@ -41,6 +42,13 @@ export class HighBaseView extends HTMLBoxView {
       }
     }
 
+    _add_series(): void {
+      if (this.chart){
+        const conf = this.model._add_series
+        this.chart.addSeries(conf.options, conf.redraw, conf.animation)
+      }
+    }
+
     _handle_config_update_change(): void {
       const config_update = this._clean_config(this.model.config_update)
       this.chart.update(config_update)
@@ -58,6 +66,7 @@ export namespace HighBase {
         config: p.Property<any>,
         config_update: p.Property<any>,
         event: p.Property<any>,
+        _add_series: p.Property<any>,
     }
 }
 
@@ -78,6 +87,7 @@ export class HighBase extends HTMLBox {
         config:             [ Any                              ],
         config_update:             [ Any                              ],
         event:              [ Any                              ],
+        _add_series:              [ Any                              ],
       }))
 
       this.override<HighBase.Props>({
