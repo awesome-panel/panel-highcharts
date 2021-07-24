@@ -98,6 +98,7 @@ When I get the time I would like to
 
 ## 📰 Change Log
 
+- 20210724: Upgraded to Panel 0.12.0 and Bokeh 2.3.3
 - 20210619: Add add_series method
 - 20210517: Add PackedBubble example
 - 20210405: Add HighStock, HighMap, HighGantt

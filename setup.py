@@ -5,15 +5,15 @@ from typing import List
 import setuptools
 
 # I only want to include a short README with a focus on the package
-with open("README.md", "r", encoding='utf-8') as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 ROOT = pathlib.Path.cwd()
 VERSION = (ROOT / "VERSION").read_text().strip()
 
 install_requires = [
-    "panel>=0.11.1",
-    "bokeh==2.3",
+    "panel>=0.12,<0.13",
+    "bokeh==2.3.3",
 ]
 
 _recommended: List[str] = []

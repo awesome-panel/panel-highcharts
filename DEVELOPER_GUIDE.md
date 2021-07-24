@@ -153,3 +153,12 @@ Note: Does not work on Windows.
 Open Binder to rebuild the package
 
 [Open Binder](https://mybinder.org/v2/gh/MarcSkovMadsen/awesome-panel-extensions/master?filepath=examples%2Freference%2Fpanes%2FPandasProfileReport.ipynb)
+
+## Upgrade BokehJS
+
+Run
+
+```bash
+cd panel_highcharts
+npm update @bokeh/bokehjs --save
+```
