@@ -30,9 +30,9 @@ class HighStock(HighBase):
         },
         "exports": {
             "highcharts": "Highcharts",
-            "highcharts/modules/stock": None,
-            "highcharts/modules/exporting": None,
-            "highcharts/modules/export-data": None,
+            "highcharts/modules/stock": "highchartsmodulesstock",
+            "highcharts/modules/exporting": "highchartsmodulesexporting",
+            "highcharts/modules/export-data": "highchartsmodulesexportdata",
         },
     }
 
@@ -101,5 +101,5 @@ class HighStock(HighBase):
         }
         cls.__js_require__["exports"] = {
             "highcharts": "Highcharts",
-            **{k: None for k in paths},  # type: ignore
+            **{k: k.replace("/","").replace("-","") for k in paths},  # type: ignore
         }

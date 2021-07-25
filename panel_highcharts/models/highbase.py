@@ -77,7 +77,7 @@ class HighBase(LayoutDOM):
         },
         "exports": {
             "highcharts": "Highcharts",
-            "highcharts/modules/exporting": None,
-            "highcharts/modules/export-data": None,
+            "highcharts/modules/exporting": "highchartsmodulesexporting",
+            "highcharts/modules/export-data": "highchartsmodulesexportdata",
         },
     }

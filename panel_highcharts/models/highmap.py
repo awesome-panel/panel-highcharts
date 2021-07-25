@@ -31,9 +31,9 @@ class HighMap(HighBase):
         },
         "exports": {
             "highcharts": "Highcharts",
-            "highcharts/modules/map": None,
-            "highcharts/modules/exporting": None,
-            "highcharts/modules/export-data": None,
+            "highcharts/modules/map": "highchartsmodulesmap",
+            "highcharts/modules/exporting": "highchartsmodulesexporting",
+            "highcharts/modules/export-data": "highchartsmodulesexportdata",
         },
     }
 
@@ -107,5 +107,5 @@ class HighMap(HighBase):
         }
         cls.__js_require__["exports"] = {
             "highcharts": "Highcharts",
-            **{k: None for k in paths},  # type: ignore
+            **{k: k.replace("/","").replace("-","") for k in paths},  # type: ignore
         }

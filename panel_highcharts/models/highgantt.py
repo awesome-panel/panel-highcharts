@@ -30,9 +30,9 @@ class HighGantt(HighBase):
         },
         "exports": {
             "highcharts": "Highcharts",
-            "highcharts/modules/gantt": None,
-            "highcharts/modules/exporting": None,
-            "highcharts/modules/export-data": None,
+            "highcharts/modules/gantt": "highchartsmodulesgantt",
+            "highcharts/modules/exporting": "highchartsmodulesexporting",
+            "highcharts/modules/export-data": "highchartsmodulesexportdata",
         },
     }
 
@@ -101,5 +101,5 @@ class HighGantt(HighBase):
         }
         cls.__js_require__["exports"] = {
             "highcharts": "Highcharts",
-            **{k: None for k in paths},  # type: ignore
+            **{k: k.replace("/","").replace("-","") for k in paths},  # type: ignore
         }

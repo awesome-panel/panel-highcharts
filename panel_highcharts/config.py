@@ -5,6 +5,7 @@
 from typing import List, Optional
 
 from panel import extension
+from panel.io import notebook
 
 # Enables using pn.extension("highchart", ...)
 # pylint: disable=protected-access
@@ -13,6 +14,27 @@ extension._imports["highstock"] = "panel_highcharts.models.highstock"
 extension._imports["highmap"] = "panel_highcharts.models.highmap"
 extension._imports["highgantt"] = "panel_highcharts.models.highgantt"
 # pylint: enable=protected-access
+
+def _mock():
+    """Temporary fix #2571 https://github.com/holoviz/panel/issues/2571"""
+    def _autoload_js(bundle, configs, requirements, exports, skip_imports, ipywidget, load_timeout=5000):
+        config = {'packages': {}, 'paths': {}, 'shim': {}}
+        for conf in configs:
+            for key, c in conf.items():
+                config[key].update(c)
+        return notebook.AUTOLOAD_NB_JS.render(
+            bundle    = bundle,
+            force     = True,
+            timeout   = load_timeout,
+            config    = config,
+            requirements = requirements,
+            exports   = exports,
+            skip_imports = skip_imports,
+            ipywidget = ipywidget
+        )
+    notebook._autoload_js = _autoload_js # pylint: disable=protected-access
+
+_mock()
 
 
 def js_files(  # pylint: disable=too-many-locals, too-many-arguments
