@@ -30,7 +30,9 @@ def test_class():
     )
 
     assert HighStock.__js_require__["exports"]["highcharts"] == "Highcharts"
-    assert HighStock.__js_require__["exports"]["highcharts/modules/stock"] is None
+    assert (
+        HighStock.__js_require__["exports"]["highcharts/modules/stock"] == "highchartsmodulesstock"
+    )
 
 
 def test_js_files(backup_js_files):  # pylint: disable=unused-argument

@@ -15,24 +15,33 @@ extension._imports["highmap"] = "panel_highcharts.models.highmap"
 extension._imports["highgantt"] = "panel_highcharts.models.highgantt"
 # pylint: enable=protected-access
 
+
+# pylint: disable=too-many-arguments, invalid-name
 def _mock():
     """Temporary fix #2571 https://github.com/holoviz/panel/issues/2571"""
-    def _autoload_js(bundle, configs, requirements, exports, skip_imports, ipywidget, load_timeout=5000):
-        config = {'packages': {}, 'paths': {}, 'shim': {}}
+
+    def _autoload_js(
+        bundle, configs, requirements, exports, skip_imports, ipywidget, load_timeout=5000
+    ):
+        config = {"packages": {}, "paths": {}, "shim": {}}
         for conf in configs:
             for key, c in conf.items():
                 config[key].update(c)
         return notebook.AUTOLOAD_NB_JS.render(
-            bundle    = bundle,
-            force     = True,
-            timeout   = load_timeout,
-            config    = config,
-            requirements = requirements,
-            exports   = exports,
-            skip_imports = skip_imports,
-            ipywidget = ipywidget
+            bundle=bundle,
+            force=True,
+            timeout=load_timeout,
+            config=config,
+            requirements=requirements,
+            exports=exports,
+            skip_imports=skip_imports,
+            ipywidget=ipywidget,
         )
-    notebook._autoload_js = _autoload_js # pylint: disable=protected-access
+
+    notebook._autoload_js = _autoload_js  # pylint: disable=protected-access
+
+
+# pylint: enable=too-many-arguments, invalid-name
 
 _mock()
 
@@ -56,6 +65,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
     highcharts_solid_gauge: bool = False,
     highcharts_3d: bool = False,
     highcharts_treemap: bool = False,
+    highcharts_variwide: bool = False,
     mapdata: Optional[List[str]] = None,
 ):
     """Configures the js files to include from https://code.highcharts.com
@@ -81,6 +91,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_solid_gauge (bool, optional): Defaults to False.
         highcharts_3d (bool, optional): Defaults to False.
         highcharts_treemap (bool, optional): Defaults to False.
+        highcharts_variwide (bool, optional): Defaults to False.
     """
     # pylint: disable=import-outside-toplevel
     from .models.highchart import HighChart
@@ -107,6 +118,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_solid_gauge=highcharts_solid_gauge,
         highcharts_3d=highcharts_3d,
         highcharts_treemap=highcharts_treemap,
+        highcharts_variwide=highcharts_variwide,
     )
 
     HighStock.js_files(

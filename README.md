@@ -78,6 +78,8 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 | Network | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Network.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/Network.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/Network.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/Network) | [Awesome Panel](https://awesome-panel.org/highcharts-network) |
 | PackedBubble | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/PackedBubble.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/PackedBubble.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/PackedBubble.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/PackedBubble) | |
 
+| Variwide | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Variwide.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/Variwide.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/Variwide.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/Variwide) | |
+
 ## 💡 Inspiration
 
 You can find more inspiration via
@@ -98,6 +100,7 @@ When I get the time I would like to
 
 ## 📰 Change Log
 
+- 20210816: Upgrade to panel 0.12.1 and support [Variwide Chart](https://github.com/MarcSkovMadsen/panel-highcharts/issues/4)
 - 20210724: Work around https://github.com/holoviz/panel/issues/2571
 - 20210724: Upgraded to Panel 0.12.0 and Bokeh 2.3.3
 - 20210619: Add add_series method

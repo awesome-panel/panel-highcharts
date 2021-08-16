@@ -54,6 +54,7 @@ class HighChart(HighBase):
         highcharts_solid_gauge: bool = False,
         highcharts_3d: bool = False,
         highcharts_treemap: bool = False,
+        highcharts_variwide: bool = False,
     ):
         """Configures the js files to include from https://code.highcharts.com
 
@@ -78,6 +79,7 @@ class HighChart(HighBase):
             highcharts_solid_gauge (bool, optional): Defaults to False.
             highcharts_3d (bool, optional): Defaults to False.
             highcharts_treemap (bool, optional): Defaults to False.
+            highcharts_variwide (bool, optional): Defaults to False.
         """
         paths = OrderedDict()
         include = {
@@ -99,6 +101,7 @@ class HighChart(HighBase):
             "highcharts/modules/offline-exporting": highcharts_offline_exporting,
             "highcharts/modules/solid-gauge": highcharts_solid_gauge,
             "highcharts/modules/treemap": highcharts_treemap,
+            "highcharts/modules/variwide": highcharts_variwide,
         }
         for key, value in include.items():
             if value:
@@ -111,5 +114,5 @@ class HighChart(HighBase):
         }
         cls.__js_require__["exports"] = {
             "highcharts": "Highcharts",
-            **{k: k.replace("/","").replace("-","") for k in paths},  # type: ignore
+            **{k: k.replace("/", "").replace("-", "") for k in paths},  # type: ignore
         }

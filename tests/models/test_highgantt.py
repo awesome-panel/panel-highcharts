@@ -30,7 +30,9 @@ def test_class():
     )
 
     assert HighGantt.__js_require__["exports"]["highcharts"] == "Highcharts"
-    assert HighGantt.__js_require__["exports"]["highcharts/modules/gantt"] is None
+    assert (
+        HighGantt.__js_require__["exports"]["highcharts/modules/gantt"] == "highchartsmodulesgantt"
+    )
 
 
 def test_js_files(backup_js_files):  # pylint: disable=unused-argument

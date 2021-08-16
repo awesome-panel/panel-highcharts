@@ -101,5 +101,5 @@ class HighStock(HighBase):
         }
         cls.__js_require__["exports"] = {
             "highcharts": "Highcharts",
-            **{k: k.replace("/","").replace("-","") for k in paths},  # type: ignore
+            **{k: k.replace("/", "").replace("-", "") for k in paths},  # type: ignore
         }

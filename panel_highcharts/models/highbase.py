@@ -36,6 +36,7 @@ PATHS = OrderedDict(
         ),
         ("highcharts/modules/solid-gauge", "https://code.highcharts.com/modules/solid-gauge.js"),
         ("highcharts/modules/treemap", "https://code.highcharts.com/modules/treemap.js"),
+        ("highcharts/modules/variwide", "https://code.highcharts.com/modules/variwide.js"),
     ]
 )
 

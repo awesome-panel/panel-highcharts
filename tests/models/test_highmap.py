@@ -30,7 +30,7 @@ def test_class():
     )
 
     assert HighMap.__js_require__["exports"]["highcharts"] == "Highcharts"
-    assert HighMap.__js_require__["exports"]["highcharts/modules/map"] is None
+    assert HighMap.__js_require__["exports"]["highcharts/modules/map"] == "highchartsmodulesmap"
 
 
 def test_js_files(backup_js_files):  # pylint: disable=unused-argument
