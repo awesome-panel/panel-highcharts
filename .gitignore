@@ -133,3 +133,4 @@ panel_highcharts/node_modules
 test_results
 !panel_highcharts/dist
 .vscode
+renewable_power_plants_DK.csv

@@ -52,12 +52,14 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
     highcharts_boost: bool = False,
     highcharts_broken_axis: bool = False,
     highcharts_canvas_tools: bool = False,
+    highcharts_coloraxis: bool = False,
     highcharts_data: bool = False,
     highcharts_drilldown: bool = False,
     highcharts_export_data: bool = True,
     highcharts_exporting: bool = True,
     highcharts_funnel: bool = False,
     highcharts_heatmap: bool = False,
+    highcharts_marker_clusters: bool = False,
     highcharts_more: bool = False,
     highcharts_networkgraph: bool = False,
     highcharts_no_data: bool = False,
@@ -77,6 +79,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_annotations (bool, optional): Defaults to False.
         highcharts_boost (bool, optional): Defaults to False.
         highcharts_broken_axis (bool, optional): Defaults to False.
+        highcharts_coloraxis (bool, optional): Defaults to False.
         highcharts_canvas_tools (bool, optional): Defaults to False.
         highcharts_data (bool, optional): Defaults to False.
         highcharts_drilldown (bool, optional): Defaults to False.
@@ -84,6 +87,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_exporting (bool, optional): Defaults to True.
         highcharts_funnel (bool, optional): Defaults to False.
         highcharts_heatmap (bool, optional): Defaults to False.
+        highcharts_marker_clusters (bool, optional): Defaults to False.
         highcharts_more (bool, optional): Defaults to False.
         highcharts_networkgraph (bool, optional): Defaults to False.
         highcharts_no_data (bool, optional): Defaults to False.
@@ -143,10 +147,12 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_boost=highcharts_boost,
         highcharts_broken_axis=highcharts_broken_axis,
         highcharts_canvas_tools=highcharts_canvas_tools,
+        highcharts_coloraxis=highcharts_coloraxis,
         highcharts_data=highcharts_data,
         highcharts_drilldown=highcharts_drilldown,
         highcharts_export_data=highcharts_export_data,
         highcharts_exporting=highcharts_exporting,
+        highcharts_marker_clusters=highcharts_marker_clusters,
         highcharts_more=highcharts_more,
         highcharts_no_data=highcharts_no_data,
         highcharts_offline_exporting=highcharts_offline_exporting,

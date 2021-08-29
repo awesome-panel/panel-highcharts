@@ -35,6 +35,7 @@ _tests = [
 _examples = [
     "notebook",
     "jupyterlab",
+    "pandas",
 ]
 
 _doc: List[str] = []

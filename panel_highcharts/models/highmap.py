@@ -45,10 +45,12 @@ class HighMap(HighBase):
         highcharts_boost: bool = False,
         highcharts_broken_axis: bool = False,
         highcharts_canvas_tools: bool = False,
+        highcharts_coloraxis: bool = False,
         highcharts_data: bool = False,
         highcharts_drilldown: bool = False,
         highcharts_export_data: bool = True,
         highcharts_exporting: bool = True,
+        highcharts_marker_clusters: bool = False,
         highcharts_more: bool = False,
         highcharts_networkgraph: bool = False,
         highcharts_no_data: bool = False,
@@ -65,10 +67,12 @@ class HighMap(HighBase):
             highcharts_boost (bool, optional): Defaults to False.
             highcharts_broken_axis (bool, optional): Defaults to False.
             highcharts_canvas_tools (bool, optional): Defaults to False.
+            highcharts_coloraxis (bool, optional): Defaults to False.
             highcharts_data (bool, optional): Defaults to False.
             highcharts_drilldown (bool, optional): Defaults to False.
             highcharts_export_data (bool, optional): Defaults to True.
             highcharts_exporting (bool, optional): Defaults to True.
+            highcharts_marker_clusters (bool, optional): Defaults to False.
             highcharts_more (bool, optional): Defaults to False.
             highcharts_networkgraph (bool, optional): Defaults to False.
             highcharts_no_data (bool, optional): Defaults to False.
@@ -83,10 +87,12 @@ class HighMap(HighBase):
             "highcharts/modules/boost": highcharts_boost,
             "highcharts/modules/broken-axis": highcharts_broken_axis,
             "highcharts/modules/canvas-tools": highcharts_canvas_tools,
+            "highcharts/modules/coloraxis": highcharts_coloraxis,
             "highcharts/modules/data": highcharts_data,
             "highcharts/modules/drilldown": highcharts_drilldown,
             "highcharts/modules/export-data": highcharts_export_data,
             "highcharts/modules/exporting": highcharts_exporting,
+            "highcharts/modules/marker-clusters": highcharts_marker_clusters,
             "highcharts/modules/networkgraph": highcharts_networkgraph,
             "highcharts/modules/no-data": highcharts_no_data,
             "highcharts/modules/offline-exporting": highcharts_offline_exporting,
