@@ -29,7 +29,7 @@ PATHS = OrderedDict(
         ("highcharts/modules/funnel", "https://code.highcharts.com/modules/funnel.js"),
         ("highcharts/modules/heatmap", "https://code.highcharts.com/modules/heatmap.js"),
         (
-            "highcharts/modules/no-data-to-display",
+            "highcharts/modules/no-data",
             "https://code.highcharts.com/modules/no-data-to-display.js",
         ),
         (
