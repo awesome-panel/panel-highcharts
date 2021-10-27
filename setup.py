@@ -12,7 +12,7 @@ ROOT = pathlib.Path.cwd()
 VERSION = (ROOT / "VERSION").read_text().strip()
 
 install_requires = [
-    "panel>=0.12.1,<0.13",
+    "panel==0.12.1",
     "bokeh==2.3.3",
 ]
 
