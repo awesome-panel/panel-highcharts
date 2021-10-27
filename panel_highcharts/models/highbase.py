@@ -15,7 +15,10 @@ PATHS = OrderedDict(
         ("highcharts/modules/stock", "https://code.highcharts.com/modules/stock.js"),
         ("highcharts/modules/map", "https://code.highcharts.com/maps/modules/map.js"),
         ("highcharts/modules/coloraxis", "https://code.highcharts.com/maps/modules/coloraxis.js"),
-        ("highcharts/modules/marker-clusters", "https://code.highcharts.com/maps/modules/marker-clusters.js"),
+        (
+            "highcharts/modules/marker-clusters",
+            "https://code.highcharts.com/maps/modules/marker-clusters.js",
+        ),
         ("highcharts/modules/gantt", "https://code.highcharts.com/modules/gantt.js"),
         ("highcharts/modules/exporting", "https://code.highcharts.com/modules/exporting.js"),
         ("highcharts/modules/export-data", "https://code.highcharts.com/modules/export-data.js"),
