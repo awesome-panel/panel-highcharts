@@ -100,6 +100,7 @@ When I get the time I would like to
 
 ## 📰 Change Log
 
+- 20211206: Upgrade to Panel 0.12.5 and Bokeh 2.4.2
 - 20210830: Released new version with more config options to support LinkedCharts gallery example
 - 20210816: Upgrade to panel 0.12.1 and support [Variwide Chart](https://github.com/MarcSkovMadsen/panel-highcharts/issues/4)
 - 20210724: Work around https://github.com/holoviz/panel/issues/2571

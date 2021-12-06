@@ -31,7 +31,7 @@
 (function(root, factory) {
   factory(root["Bokeh"], undefined);
 })(this, function(Bokeh, version) {
-  var define;
+  let define;
   return (function(modules, entry, aliases, externals) {
     const bokeh = typeof Bokeh !== "undefined" && (version != null ? Bokeh[version] : Bokeh);
     if (bokeh != null) {
@@ -44,10 +44,10 @@
 "0896b22af1": /* index.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
     const tslib_1 = require("tslib");
-    const HighChartsExtensions = tslib_1.__importStar(require("3c0c5c52d0") /* ./models/ */);
+    const HighChartsExtensions = (0, tslib_1.__importStar)(require("3c0c5c52d0") /* ./models/ */);
     exports.HighChartsExtensions = HighChartsExtensions;
     const base_1 = require("@bokehjs/base");
-    base_1.register_models(HighChartsExtensions);
+    (0, base_1.register_models)(HighChartsExtensions);
 },
 "3c0c5c52d0": /* models\index.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
