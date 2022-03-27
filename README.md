@@ -100,6 +100,7 @@ When I get the time I would like to
 
 ## 📰 Change Log
 
+- 20211206: Upgrade to Panel 0.12.6
 - 20211206: Upgrade to Panel 0.12.5 and Bokeh 2.4.2
 - 20211027: Fix [#6](https://github.com/MarcSkovMadsen/panel-highcharts/issues/6) and pin to Panel 0.12.1.
 - 20210830: Released new version with more config options to support LinkedCharts gallery example
