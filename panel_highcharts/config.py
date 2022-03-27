@@ -6,6 +6,7 @@ from typing import List, Optional
 
 from panel import extension
 from panel.io import notebook
+import panel as pn
 
 # Enables using pn.extension("highchart", ...)
 # pylint: disable=protected-access
@@ -173,3 +174,65 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_no_data=highcharts_no_data,
         highcharts_offline_exporting=highcharts_offline_exporting,
     )
+
+
+def _get_theme() -> str:
+    """Returns the name of the active theme"""
+    if "theme" in pn.state.session_args:
+        return pn.state.session_args["theme"][0].decode("utf-8").lower()
+    return "default"
+
+
+# Source list: https://github.com/highcharts/highcharts/tree/master/ts/masters/themes
+THEMES = {
+    "avocado": "https://code.highcharts.com/themes/avocado.js",
+    "brand-dark": "https://code.highcharts.com/themes/brand-dark.js",
+    "brand-light": "https://code.highcharts.com/themes/brand-light.js",
+    "dark-blue": "https://code.highcharts.com/themes/dark-blue.js",
+    "dark-green": "https://code.highcharts.com/themes/dark-green.js",
+    "dark": "https://code.highcharts.com/themes/dark-unica.js",
+    "dark-unica": "https://code.highcharts.com/themes/dark-unica.js",
+    "gray": "https://code.highcharts.com/themes/gray.js",
+    "grid-light": "https://code.highcharts.com/themes/grid-light.js",
+    "grid": "https://code.highcharts.com/themes/grid.js",
+    "high-contrast-dark": "https://code.highcharts.com/themes/high-contrast-dark.js",
+    "high-contrast-light": "https://code.highcharts.com/themes/high-contrast-light.js",
+    "sand-signika": "https://code.highcharts.com/themes/sand-signika.js",
+    "skies": "https://code.highcharts.com/themes/skies.js",
+    "sunset": "https://code.highcharts.com/themes/sunset.js",
+}
+
+def theme(name="default"):
+    """Sets the global HighCharts theme
+
+    One of
+
+    - default: The default, light theme
+    - dark: A dark theme (currently dark-unika)
+    - auto: default or dark theme depending on the global Panel theme
+    - avocado
+    - brand-dark
+    - brand-light
+    - dark-blue
+    - dark-green
+    - dark
+    - dark-unica
+    - gray
+    - grid-light
+    - grid
+    - high-contrast-dark
+    - high-contrast-light
+    - sand-signika
+    - skies
+    - sunset
+
+    See also https://github.com/highcharts/highcharts/tree/master/ts/masters/themes
+    """
+    if name == "auto":
+        name = _get_theme()
+    if name == "default":
+        return
+    
+    if not name in THEMES:
+        raise ValueError(f"'{name}' is not a valid theme.")
+    pn.config.js_files["highcharts_theme"] = THEMES[name]
