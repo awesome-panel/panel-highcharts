@@ -4,9 +4,9 @@
 """
 from typing import List, Optional
 
+import panel as pn
 from panel import extension
 from panel.io import notebook
-import panel as pn
 
 # Enables using pn.extension("highchart", ...)
 # pylint: disable=protected-access
@@ -202,6 +202,7 @@ THEMES = {
     "sunset": "https://code.highcharts.com/themes/sunset.js",
 }
 
+
 def theme(name="default"):
     """Sets the global HighCharts theme
 
@@ -232,7 +233,7 @@ def theme(name="default"):
         name = _get_theme()
     if name == "default":
         return
-    
+
     if not name in THEMES:
         raise ValueError(f"'{name}' is not a valid theme.")
     pn.config.js_files["highcharts_theme"] = THEMES[name]
