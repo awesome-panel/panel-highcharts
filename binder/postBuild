@@ -1,1 +1,2 @@
+pip install panel==0.13.1a2 -U
 jupyter serverextension enable panel.io.jupyter_server_extension
