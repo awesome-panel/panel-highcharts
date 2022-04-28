@@ -3,7 +3,7 @@ from typing import Dict
 
 import param
 from panel.pane.base import PaneBase
-from panel.util import lazy_load, string_types
+from panel.util import lazy_load
 from pyviz_comms import JupyterComm
 
 from . import config  # pylint: disable=unused-import
@@ -25,7 +25,7 @@ class HighChartBase(PaneBase):
 
     _add_series = param.Dict(doc="""Transfer the arguments of the add_series method""")
 
-    priority = None
+    priority = 0.0
 
     _rename = {"object": "config", "object_update": "config_update"}
 
@@ -36,7 +36,7 @@ class HighChartBase(PaneBase):
 
     @classmethod
     def applies(cls, obj):
-        if isinstance(obj, (dict, string_types)):
+        if isinstance(obj, (dict, str)):
             return 0
         return False
 
@@ -74,6 +74,7 @@ class HighChartBase(PaneBase):
             redraw (bool, optional): Whether to redraw the chart after adding. Defaults to True.
             animation (bool, optional): Whether to apply animation. Defaults to True.
         """
+        self._add_series = {}  # hack to be able to add series multiple times
         self._add_series = {
             "options": options,
             "redraw": redraw,
