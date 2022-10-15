@@ -56,7 +56,8 @@ pn test all
 
 Please always run this command and fix any failing tests if possible before you `git push`.
 
-### Build the Package
+
+### Update Bokeh JS
 
 Make sure Bokeh is up to date
 
@@ -66,6 +67,8 @@ npm update @bokeh/bokehjs --save
 npm audit fix
 cd ../..
 ```
+
+### Build the Package
 
 Update the version number in the [__init__.py](src/panel_highcharts/__init__.py) and
 [package.json](src/panel_highcharts/package.json) files.
