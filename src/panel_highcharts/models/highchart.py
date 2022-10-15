@@ -55,6 +55,7 @@ class HighChart(HighBase):
         highcharts_3d: bool = False,
         highcharts_treemap: bool = False,
         highcharts_variwide: bool = False,
+        highcharts_venn: bool = False,
     ):
         """Configures the js files to include from https://code.highcharts.com
 
@@ -80,6 +81,7 @@ class HighChart(HighBase):
             highcharts_3d (bool, optional): Defaults to False.
             highcharts_treemap (bool, optional): Defaults to False.
             highcharts_variwide (bool, optional): Defaults to False.
+            highcharts_venn (bool, optional): Defaults to False.
         """
         paths = OrderedDict()
         include = {
@@ -102,6 +104,7 @@ class HighChart(HighBase):
             "highcharts/modules/solid-gauge": highcharts_solid_gauge,
             "highcharts/modules/treemap": highcharts_treemap,
             "highcharts/modules/variwide": highcharts_variwide,
+            "highcharts/modules/venn": highcharts_venn,
         }
         for key, value in include.items():
             if value:

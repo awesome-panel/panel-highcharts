@@ -56,7 +56,6 @@ pn test all
 
 Please always run this command and fix any failing tests if possible before you `git push`.
 
-
 ### Update Bokeh JS
 
 Make sure Bokeh is up to date

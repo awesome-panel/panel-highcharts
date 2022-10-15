@@ -69,6 +69,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
     highcharts_3d: bool = False,
     highcharts_treemap: bool = False,
     highcharts_variwide: bool = False,
+    highcharts_venn: bool = False,
     mapdata: Optional[List[str]] = None,
 ):
     """Configures the js files to include from https://code.highcharts.com
@@ -97,6 +98,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_3d (bool, optional): Defaults to False.
         highcharts_treemap (bool, optional): Defaults to False.
         highcharts_variwide (bool, optional): Defaults to False.
+        highcharts_venn (bool, optional): Defaults to False.
     """
     # pylint: disable=import-outside-toplevel
     from .models.highchart import HighChart
@@ -124,6 +126,7 @@ def js_files(  # pylint: disable=too-many-locals, too-many-arguments
         highcharts_3d=highcharts_3d,
         highcharts_treemap=highcharts_treemap,
         highcharts_variwide=highcharts_variwide,
+        highcharts_venn=highcharts_venn,
     )
 
     HighStock.js_files(

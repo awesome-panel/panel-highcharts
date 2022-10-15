@@ -1,34 +1,30 @@
-import json
-
-import requests
-
 import panel_highcharts as ph
 
 ph.config.theme("auto")
+ph.config.js_files(highcharts_venn=True)
 
 import panel as pn
 
-pn.extension("highstock")
+pn.extension("highchart", template="fast")
 
-data = requests.get(
-    "https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/new-intraday.json"
-).json()
 configuration = {
-    "title": {"text": "AAPL stock price by minute"},
     "series": [
         {
-            "name": "AAPL",
-            "type": "candlestick",
-            "data": data,
-            "tooltip": {"valueDecimals": 2},
-            "allowPointSelect": "true",
-            "point": {
-                "events": {
-                    "mouseOver": "@mouseOverFun",
-                }
-            },
+            "type": "venn",
+            "name": "The Unattainable Triangle",
+            "data": [
+                {"sets": ["Good"], "value": 2},
+                {"sets": ["Fast"], "value": 2},
+                {"sets": ["Cheap"], "value": 2},
+                {"sets": ["Good", "Fast"], "value": 1, "name": "More expensive"},
+                {"sets": ["Good", "Cheap"], "value": 1, "name": "Will take time to deliver"},
+                {"sets": ["Fast", "Cheap"], "value": 1, "name": "Not the best quality"},
+                {"sets": ["Fast", "Cheap", "Good"], "value": 1, "name": "They're dreaming"},
+            ],
         }
     ],
+    "title": {"text": "The Unattainable Triangle"},
 }
-plot_pane = ph.HighStock(object=configuration, sizing_mode="stretch_both", min_height=600)
-pn.Column(plot_pane, plot_pane.param.event).servable()
+plot_pane = ph.HighChart(
+    object=configuration, sizing_mode="stretch_both", min_height=600
+).servable()
