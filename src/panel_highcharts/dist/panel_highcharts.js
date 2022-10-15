@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2012 - 2021, Anaconda, Inc., and Bokeh Contributors
+ * Copyright (c) 2012 - 2022, Anaconda, Inc., and Bokeh Contributors
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification,
@@ -41,28 +41,28 @@
     }
   })
 ({
-"0896b22af1": /* index.js */ function _(require, module, exports, __esModule, __esExport) {
+"a0c879f7bc": /* index.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
     const tslib_1 = require("tslib");
-    const HighChartsExtensions = (0, tslib_1.__importStar)(require("3c0c5c52d0") /* ./models/ */);
+    const HighChartsExtensions = (0, tslib_1.__importStar)(require("e1cfbcac6a") /* ./models/ */);
     exports.HighChartsExtensions = HighChartsExtensions;
     const base_1 = require("@bokehjs/base");
     (0, base_1.register_models)(HighChartsExtensions);
 },
-"3c0c5c52d0": /* models\index.js */ function _(require, module, exports, __esModule, __esExport) {
+"e1cfbcac6a": /* models/index.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    var highchart_1 = require("df31ad65ef") /* ./highchart */;
+    var highchart_1 = require("095f123a5a") /* ./highchart */;
     __esExport("HighChart", highchart_1.HighChart);
-    var highstock_1 = require("60e97661a4") /* ./highstock */;
+    var highstock_1 = require("3592d7ba01") /* ./highstock */;
     __esExport("HighStock", highstock_1.HighStock);
-    var highmap_1 = require("6d1e48a659") /* ./highmap */;
+    var highmap_1 = require("33b3f119ef") /* ./highmap */;
     __esExport("HighMap", highmap_1.HighMap);
-    var highgantt_1 = require("dd1f1d4ad4") /* ./highgantt */;
+    var highgantt_1 = require("556ad5390c") /* ./highgantt */;
     __esExport("HighGantt", highgantt_1.HighGantt);
 },
-"df31ad65ef": /* models\highchart.js */ function _(require, module, exports, __esModule, __esExport) {
+"095f123a5a": /* models/highchart.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("f43d669328") /* ./highbase */;
+    const highbase_1 = require("04fcb9992e") /* ./highbase */;
     class HighChartView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.chart(el, config);
@@ -80,7 +80,7 @@
     HighChart.__module__ = "panel_highcharts.models.highchart";
     HighChart.init_HighChart();
 },
-"f43d669328": /* models\highbase.js */ function _(require, module, exports, __esModule, __esExport) {
+"04fcb9992e": /* models/highbase.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
     const html_box_1 = require("@bokehjs/models/layouts/html_box");
     class HighBaseView extends html_box_1.HTMLBoxView {
@@ -236,9 +236,9 @@
         });
     }
 },
-"60e97661a4": /* models\highstock.js */ function _(require, module, exports, __esModule, __esExport) {
+"3592d7ba01": /* models/highstock.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("f43d669328") /* ./highbase */;
+    const highbase_1 = require("04fcb9992e") /* ./highbase */;
     class HighStockView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.stockChart(el, config);
@@ -256,9 +256,9 @@
     HighStock.__module__ = "panel_highcharts.models.highstock";
     HighStock.init_HighStock();
 },
-"6d1e48a659": /* models\highmap.js */ function _(require, module, exports, __esModule, __esExport) {
+"33b3f119ef": /* models/highmap.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("f43d669328") /* ./highbase */;
+    const highbase_1 = require("04fcb9992e") /* ./highbase */;
     class HighMapView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.mapChart(el, config);
@@ -276,9 +276,9 @@
     HighMap.__module__ = "panel_highcharts.models.highmap";
     HighMap.init_HighMap();
 },
-"dd1f1d4ad4": /* models\highgantt.js */ function _(require, module, exports, __esModule, __esExport) {
+"556ad5390c": /* models/highgantt.js */ function _(require, module, exports, __esModule, __esExport) {
     __esModule();
-    const highbase_1 = require("f43d669328") /* ./highbase */;
+    const highbase_1 = require("04fcb9992e") /* ./highbase */;
     class HighGanttView extends highbase_1.HighBaseView {
         create_chart(wn, el, config) {
             return wn.Highcharts.ganttChart(el, config);
@@ -296,5 +296,5 @@
     HighGantt.__module__ = "panel_highcharts.models.highgantt";
     HighGantt.init_HighGantt();
 },
-}, "0896b22af1", {"index":"0896b22af1","models/index":"3c0c5c52d0","models/highchart":"df31ad65ef","models/highbase":"f43d669328","models/highstock":"60e97661a4","models/highmap":"6d1e48a659","models/highgantt":"dd1f1d4ad4"}, {});});
+}, "a0c879f7bc", {"index":"a0c879f7bc","models/index":"e1cfbcac6a","models/highchart":"095f123a5a","models/highbase":"04fcb9992e","models/highstock":"3592d7ba01","models/highmap":"33b3f119ef","models/highgantt":"556ad5390c"}, {});});
 //# sourceMappingURL=panel_highcharts.js.map

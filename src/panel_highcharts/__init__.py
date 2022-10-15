@@ -5,3 +5,5 @@
 """
 from . import config
 from .charts import HighChart, HighGantt, HighMap, HighStock
+
+VERSION = "20221015.3"

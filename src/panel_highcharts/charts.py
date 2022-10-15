@@ -9,7 +9,7 @@ from pyviz_comms import JupyterComm
 from . import config  # pylint: disable=unused-import
 
 
-class HighChartBase(PaneBase):
+class HighChartBase(PaneBase):  # pylint: disable=too-many-ancestors
     """A Base Panel HighChart pane"""
 
     # Events: https://api.highcharts.com/highcharts/plotOptions.series.point.events
@@ -82,28 +82,28 @@ class HighChartBase(PaneBase):
         }
 
 
-class HighChart(HighChartBase):
+class HighChart(HighChartBase):  # pylint: disable=too-many-ancestors
     """A Panel HighChart pane"""
 
     _model_module = "panel_highcharts.models.highchart"
     _model = "HighChart"
 
 
-class HighStock(HighChartBase):
+class HighStock(HighChartBase):  # pylint: disable=too-many-ancestors
     """A Panel HighStock pane"""
 
     _model_module = "panel_highcharts.models.highstock"
     _model = "HighStock"
 
 
-class HighMap(HighChartBase):
+class HighMap(HighChartBase):  # pylint: disable=too-many-ancestors
     """A Panel HighMap pane"""
 
     _model_module = "panel_highcharts.models.highmap"
     _model = "HighMap"
 
 
-class HighGantt(HighChartBase):
+class HighGantt(HighChartBase):  # pylint: disable=too-many-ancestors
     """A Panel HighGantt pane"""
 
     _model_module = "panel_highcharts.models.highgantt"

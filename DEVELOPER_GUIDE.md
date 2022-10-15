@@ -1,164 +1,102 @@
 # For Contributers
 
-## Prerequisites
+## 📙 How to
 
-- Python
-- Node >= 14
-
-## Installation
+## Git Clone
 
 ```bash
 git clone https://github.com/marcskovmadsen/panel-highcharts
 cd panel-highcharts
 ```
 
-Create your virtual environment.
+### Create an environment with `pip`
+
+**Please note getting node.js might be easier with `conda`. See below for instructions.**
+
+You can create and activate a virtual environment with `pip` by running.
 
 ```bash
 python -m venv .venv
+source .venv/bin/activate # works on linux. Other command is nescessary for windows.
 ```
 
-Activate your virtual environment. On Windows with Git Bash it can be done via
+You will also need to install [nodejs](https://nodejs.org/en/) and make it available on your `PATH`.
+
+### Create an environment with `conda`
+
+You can create and activate a virtual environment with conda by running.
 
 ```bash
-source .venv/Scripts/activate
+conda create --name panel-highcharts python=3.9 nodejs
+conda activate panel-highcharts
 ```
+
+### Install for development
 
 Install the `panel-highcharts` package for editing
 
 ```bash
+pip install pip -U
 pip install -e .[all]
 ```
 
-## Bokeh Models build
+This will also install the [`awesome-panel-cli`](https://github.com/awesome-panel/awesome-panel-cli) tool.
+
+You can see the available commands via
 
 ```bash
-panel build panel_highcharts
+pn --help
 ```
 
-## Tests
+You can run all tests via
 
 ```bash
-invoke test.all
+pn test all
 ```
 
-will run `isort`, `autoflake`, `black`, `pylint`, `mypy` and `pytest`. It should look like
+Please always run this command and fix any failing tests if possible before you `git push`.
+
+
+### Update Bokeh JS
+
+Make sure Bokeh is up to date
 
 ```bash
-$ invoke test.all
-
-Running isort the Python code import sorter
-===========================================
-
-isort .
-Skipped 7 files
-
-Running autoflake to remove unused imports on all .py files recursively
-=======================================================================
-
-autoflake --imports=pytest,pandas,numpy,plotly,dash,urllib3 --in-place --recur
-sive .
-
-Running Black the Python code formatter
-=======================================
-
-black .
-All done! \u2728 \U0001f370 \u2728
-16 files left unchanged.
-
-Running pylint.
-Pylint looks for programming errors, helps enforcing a coding standard,
-sniffs for code smells and offers simple refactoring suggestions.
-=======================================================================
-
-pylint setup.py tasks panel_highcharts tests
-
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
-
-
-Running mypy for identifying python type errors
-===============================================
-
-mypy setup.py tasks panel_highcharts tests
-Success: no issues found in 16 source files
-
-Running pytest the test framework
-=================================
-
-pytest tests --doctest-modules --cov=panel_highcharts -m "not functionaltest a
-nd not integrationtest" --cov-report html:test_results/cov_html
-============================= test session starts =============================
-platform win32 -- Python 3.8.4, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
-rootdir: C:\repos\private\panel-highcharts, configfile: pytest.ini, testpaths: tests
-plugins: anyio-2.2.0, cov-2.11.1
-collected 6 items
-
-tests\test_config.py .                                                   [ 16%]
-tests\test_highchart.py ...                                              [ 66%]
-tests\models\test_highchart.py ..                                        [100%]
-
------------ coverage: platform win32, python 3.8.4-final-0 -----------
-Coverage HTML written to dir test_results/cov_html
-
-
-============================== 6 passed in 2.07s ==============================
-
-All Tests Passed Successfully
-=============================
-```
-
-## Package build
-
-In the `VERSION` file update the `version` number and then run
-
-```bash
-python setup.py sdist bdist_wheel
-```
-
-## Package Deploy
-
-to production
-
-```bash
-python -m twine upload dist/*20210403.2*
-```
-
-or to test
-
-```bash
-python -m twine upload --repository testpypi dist/*20210403.1.4*
-```
-
-Have binder build the new image: [binder](https://mybinder.org/v2/gh/MarcSkovMadsen/awesome-panel-extensions/master?filepath=examples%2Freference%2Fframeworks%2Fmaterial%2FMaterialIntSlider.ipynb)
-
-## Build and Run Binder Image Locally
-
-In order to test the Binder Image you can install repo2docker
-
-```python
-python -m pip install jupyter-repo2docker
-```
-
-You can then run
-
-```python
-jupyter-repo2docker https://github.com/MarcSkovMadsen/awesome-panel-extensions
-```
-
-Note: Does not work on Windows.
-
-## Open Binder
-
-Open Binder to rebuild the package
-
-[Open Binder](https://mybinder.org/v2/gh/MarcSkovMadsen/awesome-panel-extensions/master?filepath=examples%2Freference%2Fpanes%2FPandasProfileReport.ipynb)
-
-## Upgrade BokehJS
-
-Run
-
-```bash
-cd panel_highcharts
+cd src/panel_highcharts
 npm update @bokeh/bokehjs --save
+npm audit fix
+cd ../..
 ```
+
+### Build the Package
+
+Update the version number in the [__init__.py](src/panel_highcharts/__init__.py) and
+[package.json](src/panel_highcharts/package.json) files.
+
+Then build the Bokeh models
+
+```bash
+panel build src/panel_highcharts
+```
+
+Finally you can build the package
+
+```bash
+pn build package
+```
+
+### 🚢 Release a new package on Pypi
+
+Start by running all tests successfully
+
+```bash
+pn test all
+```
+
+The [Build the package](#build-the-Package) and run
+
+```bash
+pn release package <VERSION>
+```
+
+to release the package 📦. To upload to *Test Pypi* first, you can add the `--test` flag.

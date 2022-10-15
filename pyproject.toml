@@ -1,2 +1,120 @@
+[build-system]
+requires = ["setuptools",]
+build-backend = "setuptools.build_meta"
+[project]
+name = "panel-highcharts"
+description = "This package makes it super simple to do exploratory data analysis and develop high-quality Panel data apps using the HighCharts plotting library."
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["python", "holoviz", "panel", "dataviz", "dataapp", "dashboard", "datascience", "analytics", "highcharts"]
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Legal Industry",
+    "Intended Audience :: Other Audience",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Office/Business",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "panel<1.0",
+    "bokeh<3.0",
+]
+dynamic = ["version"]
+
+authors = [
+    {name = "awesome-panel"}
+]
+
+[project.optional-dependencies]
+dev = ["awesome-panel-cli"]
+all = ["awesome-panel-cli", "notebook", "jupyterlab", "pandas"]
+
+[project.urls]
+repository = "https://github.com/awesome-panel/panel-highcharts"
+
+[tool.setuptools.dynamic]
+version = {attr = "panel_highcharts.VERSION"}
+
 [tool.black]
 line-length = 100
+
+[tool.isort]
+profile = "black"
+src_paths = ["src", "tests"]
+
+[tool.pylint.main]
+py-version=3.9
+output-format = "colorized"
+max-attributes=12
+max-args=10
+
+[tool.pylint.format]
+max-module-lines = 1000
+
+[tool.mypy]
+python_version = "3.9"
+namespace_packages = true
+explicit_package_bases = true
+mypy_path = "src"
+exclude = []
+
+[[tool.mypy.overrides]]
+module = [
+    "bokeh.*",
+    "holoviews.*",
+    "hvplot.*",
+    "param.*",
+    "pyviz_comms.*",
+]
+ignore_missing_imports = true
+
+# https://github.com/pytest-dev/pytest/blob/main/pyproject.toml
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-s"
+testpaths = ["tests"]
+junit_family = "legacy"
+python_files = ["tests.py","test_*.py"]
+markers = [
+    "unittest", # Small, isolated test
+    "integrationtest", # A test towards some external system or service. For example a database
+    "functionaltest", # Large potentially non-isolated test requiring access to external services
+    "slow", # A slow test. Skip normally. But run this when you have the time.
+    "skip_in_build_server", # Tests that should be skipped on the build server
+]
+filterwarnings=[
+    "ignore:the imp module is deprecated in favour of importlib.*:DeprecationWarning", 
+    "ignore:inspect.getargspec.*:DeprecationWarning"
+]
+
+[tool.coverage.run]
+omit=[]
+
+[html]
+directory="test_results/cov_html"
+skip_empty=true
+
+[tool.bandit]
+exclude_dirs = [".venv", "venv",]
+severity="high"
+
+[tool.bandit.assert_used]
+exclude = ["*_test.py", "test_*.py"]
