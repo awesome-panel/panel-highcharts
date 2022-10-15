@@ -21,7 +21,7 @@ class HighChartBase(PaneBase):  # pylint: disable=too-many-ancestors
     )
     object_update = param.Dict(doc="""Incremental change to the initial user configuration.""")
 
-    event = param.Dict(doc="""Events raised by the chart""", readonly=True)
+    event = param.Dict(doc="""Events raised by the chart""")
 
     _add_series = param.Dict(doc="""Transfer the arguments of the add_series method""")
 
