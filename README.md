@@ -46,7 +46,7 @@ configuration = {
 ph.HighChart(object=configuration, sizing_mode="stretch_width").servable()
 ```
 
-![Basic Example](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-basic-example.png)
+![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/panel-highcharts-intro.gif)
 
 ## ⭐ Support
 
