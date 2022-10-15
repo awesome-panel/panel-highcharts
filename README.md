@@ -1,49 +1,38 @@
 ![Panel HighCharts Logo](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-logo.png)
 
-[![PyPI version](https://badge.fury.io/py/panel-sketch.svg)](https://pypi.org/project/panel-highcharts/) [![Downloads](https://pepy.tech/badge/panel-highcharts/month)](https://pepy.tech/project/panel-highcharts) ![Python Versions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue) ![PyPI - License](https://img.shields.io/pypi/l/panel-highcharts) ![Style Black](https://warehouse-camo.ingress.cmh1.psfhosted.org/fbfdc7754183ecf079bc71ddeabaf88f6cbc5c00/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d626c61636b2d3030303030302e737667)
-
+[![PyPI version](https://badge.fury.io/py/panel-highcharts.svg)](https://pypi.org/project/panel-highcharts/)
+[![Downloads](https://pepy.tech/badge/panel-highcharts/month)](https://pepy.tech/project/panel-highcharts)
+![Python Versions](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)
+[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
+![Test Results](https://github.com/awesome-panel/panel-highcharts/actions/workflows/tests.yaml/badge.svg?branch=main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/awesome-panel/panel-highcharts/HEAD)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/MarcSkovMadsen.svg?style=social)](https://twitter.com/MarcSkovMadsen)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcskovmadsen)
 
-# &#128200; Panel HighCharts
+# 📈 Panel Highcharts
 
-The `panel-highcharts` package makes it easy to use [Highcharts](https://www.highcharts.com/) from Python for exploratory analysis in a Jupyter Notebook or as a [HoloViz Panel](https://panel.holoviz.org) Web App.
+We want to
 
-Check out the `panel-highcharts` examples on **Binder** or the article [Highly Interactive Data Visualization](https://towardsdatascience.com/highly-interactive-data-visualization-cd3a9b082370).
+- make it super simple to do **exploratory data analysis** and develop high-quality
+[Panel](https://awesome-panel.org) **data apps** using the [HighCharts](https://www.highcharts.com/) plotting library.
 
-| Jupyter Notebook | Jupyter Labs | Panel Apps |
-| - | - | - |
-| [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel) |
+We provide
 
-[<img src="https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-binder.gif" alt="Panel HighChart Reference Example" style="max-width:100%;">](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighChart.ipynb)
+- the [`panel-highcharts`](https://pypi.org/project/panel-highcharts/) python package for Panel.
+- example notebooks and data apps.
 
-
-
-## 🏁 Background
-
-This project was started because a colleague of mine loves to use HighCharts for his analytics trading apps. As there was no really easy way of using HighCharts in Python, Notebooks or Panel, it would be difficult for me, my team and our traders to collaborate. So I created this package in my spare time as an open source project to share with the world.
-
-## ⚖️ License
-
-The `panel-highcharts` python package and repository is open source and free to use (MIT License), however **Highcharts itself requires a license for commercial use**. For more info see the Highcharts license [FAQs](https://shop.highsoft.com/faq).
-
-## 🏃 Getting Started
-
-With `pip`
+You can install and use the package as simple as.
 
 ```bash
 pip install panel-highcharts
 ```
-
-From within a Jupyter Notebook
 
 ```python
 import panel_highcharts as ph
 
 import panel as pn
 pn.extension('highchart')
-```
 
-```python
 configuration = {
     "title": {"text": "HighChart Pane"},
     "series": [
@@ -53,15 +42,47 @@ configuration = {
         }
     ]
 }
-```
 
-```python
-ph.HighChart(object=configuration, sizing_mode="stretch_width")
+ph.HighChart(object=configuration, sizing_mode="stretch_width").servable()
 ```
 
 ![Basic Example](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-basic-example.png)
 
-### 👩‍🏫 Reference Guides
+## ⭐ Support
+
+Please support [Panel](https://panel.holoviz.org) and
+[awesome-panel](https://awesome-panel.org) by giving the projects a star on Github:
+
+- [holoviz/panel](https://github.com/holoviz/panel).
+- [awesome-panel/awesome-panel](https://github.com/awesome-panel/awesome-panel).
+
+Thanks
+
+## ❤️ Contribute
+
+If you are looking to contribute to this project you can find ideas in the [issue tracker](https://github.com/awesome-panel/panel-highcharts/issues). To get started check out the [DEVELOPER_GUIDE](DEVELOPER_GUIDE.md).
+
+I would love to support and receive your contributions. Thanks.
+
+[![Hacktober Fest](https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?fit=1200%2C630)](https://github.com/awesome-panel/awesome-panel-cli/issues).
+
+## ⚖️ License
+
+The `panel-highcharts` python package and repository is open source and free to use (MIT License), however **Highcharts itself requires a license for commercial use**. For more info see the Highcharts license [FAQs](https://shop.highsoft.com/faq).
+
+## 📙 How to
+
+Below we describe how to get started.
+
+### 🚀 Install for usage
+
+You can install the package via
+
+```bash
+pip install panel-highcharts
+```
+
+### 👩‍🏫 Explore the reference examples online
 
 | Guide | Notebook | Jupyter Notebook | Jupyter Labs | Panel App |
 | - | - | - | - | - |
@@ -70,7 +91,7 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 | HighMap | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighMap.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/HighMap.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighMap.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/HighMap) |
 | HighGantt | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/HighGantt.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/HighGantt.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/HighGantt.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/HighGantt) |
 
-### 🎨 Gallery
+### 🎨 Explore other examples online
 
 | Guide | Notebook | Jupyter Notebook | Jupyter Labs | App | App
 | - | - | - | - |- | - |
@@ -81,36 +102,25 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width")
 | Themes | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Themes.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/Themes.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/Themes.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/Themes) | |
 | Variwide | [View](https://github.com/MarcSkovMadsen/panel-highcharts/blob/main/examples/Variwide.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?filepath=examples/Variwide.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=lab/tree/examples/Variwide.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcskovmadsen/panel-highcharts/HEAD?urlpath=panel/Variwide) | |
 
-## 💡 Inspiration
+### 👩‍🏫 Explore the examples locally
 
-You can find more inspiration via
+Run
 
-- [Awesome Panel](https://awesome-panel.org)
-- [Highcharts](https://www.highcharts.com), [Demos](https://www.highcharts.com/demo)
-- [Highly Interactive Data Visualization](https://towardsdatascience.com/highly-interactive-data-visualization-cd3a9b082370)
-- [Panel](https://panel.holoviz.org)
+```bash
+pip install pip -U
+pip install panel-highcharts[all]
+git clone https://github.com/awesome-panel/panel-highcharts.git
+cd panel-highcharts/examples
+```
 
-## 🛣️ Roadmap
+Then run
 
-When I get the time I would like to
+```bash
+jupyter lab
+```
 
-- Support pandas `.plot` api via method as `.highplot` on dataframes
-- Add more examples
-- Add badges for 100% test coverage etc.
-- Distribute as conda package
+or
 
-## 📰 Change Log
-
-- 20220327: Add support for themes
-- 20211206: Upgrade to Panel 0.12.6
-- 20211206: Upgrade to Panel 0.12.5 and Bokeh 2.4.2
-- 20211027: Fix [#6](https://github.com/MarcSkovMadsen/panel-highcharts/issues/6) and pin to Panel 0.12.1.
-- 20210830: Released new version with more config options to support LinkedCharts gallery example
-- 20210816: Upgrade to panel 0.12.1 and support [Variwide Chart](https://github.com/MarcSkovMadsen/panel-highcharts/issues/4)
-- 20210724: Work around https://github.com/holoviz/panel/issues/2571
-- 20210724: Upgraded to Panel 0.12.0 and Bokeh 2.3.3
-- 20210619: Add add_series method
-- 20210517: Add PackedBubble example
-- 20210405: Add HighStock, HighMap, HighGantt
-- 20210404: Can now display in Classic Notebook
-- 20210403: First Release to PyPi. Works in Jupyter Lab and Panel App.
+```bash
+panel serve *.ipynb
+```

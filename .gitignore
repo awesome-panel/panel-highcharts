@@ -129,8 +129,8 @@ dmypy.json
 .pyre/
 
 # Custom ignore
-panel_highcharts/node_modules
+src/panel_highcharts/node_modules
 test_results
-!panel_highcharts/dist
+!src/panel_highcharts/dist
 .vscode
 renewable_power_plants_DK.csv
