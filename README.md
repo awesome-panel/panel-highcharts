@@ -12,8 +12,6 @@ We provide
 - the [`panel-highcharts`](https://pypi.org/project/panel-highcharts/) python package for Panel.
 - example notebooks and data apps.
 
-You can install and use the package as simple as.
-
 ![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/panel-highcharts-intro.gif)
 
 ## Monitor
