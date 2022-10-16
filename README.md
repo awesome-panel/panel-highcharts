@@ -61,12 +61,19 @@ Install `panel-highcharts` including the *example dependencies*.
 pip install panel-highcharts[examples]
 ```
 
-Explore the sample notebooks in the examples folder
+Download the examples
 
 ```bash
 pn examples panel-highcharts
+```
+
+Explore the sample notebooks in the folder `examples/awesome-panel/panel-highcharts`
+
+```bash
 jupyter lab
 ```
+
+![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/pn-examples-panel-highcharts.gif)
 
 Explore the sample apps
 
@@ -74,7 +81,7 @@ Explore the sample apps
 pn hello panel-highcharts
 ```
 
-![pn hello](https://github.com/awesome-panel/awesome-panel-cli/blob/main/assets/videos/pn-hello.gif?raw=true)
+![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/pn-hello-panel-highcharts.gif)
 
 ### 📒 Get started on Binder
 
