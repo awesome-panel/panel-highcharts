@@ -55,7 +55,7 @@ Below we describe how to get started.
 
 ### 🚀 Get started in under a minute
 
-Install `panel-highcharts` including the *example dependencies*.
+Install `panel-highcharts` including the *`examples` dependencies*.
 
 ```bash
 pip install panel-highcharts[examples]
@@ -113,3 +113,5 @@ ph.HighChart(object=configuration, sizing_mode="stretch_width").servable()
 ### Checkout Highcharts examples
 
 Follow the [link](https://www.highcharts.com/demo)
+
+![Highcharts Gallery](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/highcharts-gallery.gif)
