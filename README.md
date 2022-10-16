@@ -91,4 +91,4 @@ Click the button
 
 Follow the [link](https://www.highcharts.com/demo)
 
-![Highcharts Gallery](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/highcharts-gallery.gif)
+![Highcharts Gallery](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/highcharts-gallery.png)
