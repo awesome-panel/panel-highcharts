@@ -67,7 +67,7 @@ Download the examples
 pn examples panel-highcharts
 ```
 
-Explore the sample notebooks in the folder `examples/awesome-panel/panel-highcharts`
+Explore the sample notebooks in the folder `examples/awesome-panel/panel-highcharts`. You will need to `pip install jupyterlab` if its not already installed.
 
 ```bash
 jupyter lab
@@ -88,27 +88,6 @@ pn hello panel-highcharts
 Click the button
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/awesome-panel/panel-highcharts/HEAD)
-
-### Create a hello world example
-
-```python
-import panel_highcharts as ph
-
-import panel as pn
-pn.extension('highchart')
-
-configuration = {
-    "title": {"text": "HighChart Pane"},
-    "series": [
-        {
-            "name": "series1",
-            "data": [1, 2, 3, 4, 5],
-        }
-    ]
-}
-
-ph.HighChart(object=configuration, sizing_mode="stretch_width").servable()
-```
 
 ### Checkout Highcharts examples
 

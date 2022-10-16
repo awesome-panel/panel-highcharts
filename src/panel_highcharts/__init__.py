@@ -6,4 +6,4 @@
 from . import config
 from .charts import HighChart, HighGantt, HighMap, HighStock
 
-VERSION = "20221015.5"
+VERSION = "20221016.1"

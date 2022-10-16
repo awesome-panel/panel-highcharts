@@ -47,7 +47,6 @@ authors = [
 dev = ["awesome-panel-cli[dev]"]
 examples = [
     "awesome-panel-cli",
-    "jupyterlab",
     "notebook",
     "pandas",
 ]
@@ -56,7 +55,6 @@ all = [
     "awesome-panel-cli[dev]",
     # examples
     "awesome-panel-cli",
-    "jupyterlab",
     "notebook",
     "pandas",
 ]
