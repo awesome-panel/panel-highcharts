@@ -134,3 +134,4 @@ test_results
 !src/panel_highcharts/dist
 .vscode
 renewable_power_plants_DK.csv
+examples/awesome-panel/

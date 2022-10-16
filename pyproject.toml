@@ -44,8 +44,22 @@ authors = [
 ]
 
 [project.optional-dependencies]
-dev = ["awesome-panel-cli"]
-all = ["awesome-panel-cli", "notebook", "jupyterlab", "pandas"]
+dev = ["awesome-panel-cli[dev]"]
+examples = [
+    "awesome-panel-cli",
+    "jupyterlab",
+    "notebook",
+    "pandas",
+]
+all = [
+    # dev
+    "awesome-panel-cli[dev]",
+    # examples
+    "awesome-panel-cli",
+    "jupyterlab",
+    "notebook",
+    "pandas",
+]
 
 [project.urls]
 repository = "https://github.com/awesome-panel/panel-highcharts"
