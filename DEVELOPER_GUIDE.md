@@ -2,7 +2,7 @@
 
 ## 📙 How to
 
-## Git Clone
+### Git Clone
 
 ```bash
 git clone https://github.com/marcskovmadsen/panel-highcharts
