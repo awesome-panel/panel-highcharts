@@ -1,5 +1,8 @@
 ![Panel HighCharts Logo](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/panel-highcharts-logo.png)
 
+[![Follow on Twitter](https://img.shields.io/twitter/follow/MarcSkovMadsen.svg?style=social)](https://twitter.com/MarcSkovMadsen)
+[![Follow on LinkedIn](https://img.shields.io/badge/linked-in-blue)](https://www.linkedin.com/in/marcskovmadsen)
+
 # 📈 Panel Highcharts
 
 We want to
@@ -14,16 +17,39 @@ We provide
 
 ![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/panel-highcharts-intro.gif)
 
-## Monitor
+## ⚖️ License
 
-[![PyPI version](https://badge.fury.io/py/panel-highcharts.svg)](https://pypi.org/project/panel-highcharts/)
-[![Downloads](https://pepy.tech/badge/panel-highcharts/month)](https://pepy.tech/project/panel-highcharts)
-![Python Versions](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)
-[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
-![Test Results](https://github.com/awesome-panel/panel-highcharts/actions/workflows/tests.yaml/badge.svg?branch=main)
+The `panel-highcharts` python package and repository is open source and free to use (MIT License), however **Highcharts itself requires a license for commercial use**. For more info see the Highcharts license [FAQs](https://shop.highsoft.com/faq).
 
-[![Follow on Twitter](https://img.shields.io/twitter/follow/MarcSkovMadsen.svg?style=social)](https://twitter.com/MarcSkovMadsen)
-[![Follow on LinkedIn](https://img.shields.io/badge/linked-in-blue)](https://www.linkedin.com/in/marcskovmadsen)
+## 🚀 Get started in under a minute
+
+Install `panel-highcharts` including the *`examples` dependencies*.
+
+```bash
+pip install panel-highcharts[examples]
+```
+
+Explore the sample apps
+
+```bash
+pn hello panel-highcharts
+```
+
+![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/pn-hello-panel-highcharts.gif)
+
+You can now find the *reference* and *gallery* notebooks in the `examples/awesome-panel/panel-highcharts` folder. Check them out by running `jupyter lab`.
+
+## 📒 Get started on Binder
+
+Click the button
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/awesome-panel/panel-highcharts/HEAD)
+
+## Checkout Highcharts Demos
+
+Follow the [link](https://www.highcharts.com/demo)
+
+[![Highcharts Gallery](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/highcharts-gallery.png)](https://www.highcharts.com/demo)
 
 ## ⭐ Support
 
@@ -43,52 +69,10 @@ I would love to support and receive your contributions. Thanks.
 
 [![Hacktober Fest](https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?fit=1200%2C630)](https://github.com/awesome-panel/awesome-panel-cli/issues).
 
-## ⚖️ License
+## Monitor
 
-The `panel-highcharts` python package and repository is open source and free to use (MIT License), however **Highcharts itself requires a license for commercial use**. For more info see the Highcharts license [FAQs](https://shop.highsoft.com/faq).
-
-## 📙 How to
-
-Below we describe how to get started.
-
-### 🚀 Get started in under a minute
-
-Install `panel-highcharts` including the *`examples` dependencies*.
-
-```bash
-pip install panel-highcharts[examples]
-```
-
-Download the examples
-
-```bash
-pn examples panel-highcharts
-```
-
-Explore the sample notebooks in the folder `examples/awesome-panel/panel-highcharts`. You will need to `pip install jupyterlab` if its not already installed.
-
-```bash
-jupyter lab
-```
-
-![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/pn-examples-panel-highcharts.gif)
-
-Explore the sample apps
-
-```bash
-pn hello panel-highcharts
-```
-
-![Panel HighCharts Intro](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/videos/pn-hello-panel-highcharts.gif)
-
-### 📒 Get started on Binder
-
-Click the button
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/awesome-panel/panel-highcharts/HEAD)
-
-### Checkout Highcharts examples
-
-Follow the [link](https://www.highcharts.com/demo)
-
-[![Highcharts Gallery](https://raw.githubusercontent.com/MarcSkovMadsen/panel-highcharts/main/assets/images/highcharts-gallery.png)](https://www.highcharts.com/demo)
+[![PyPI version](https://badge.fury.io/py/panel-highcharts.svg)](https://pypi.org/project/panel-highcharts/)
+[![Downloads](https://pepy.tech/badge/panel-highcharts/month)](https://pepy.tech/project/panel-highcharts)
+![Python Versions](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)
+[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
+![Test Results](https://github.com/awesome-panel/panel-highcharts/actions/workflows/tests.yaml/badge.svg?branch=main)
