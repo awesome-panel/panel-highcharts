@@ -3,7 +3,7 @@
 [![Follow on Twitter](https://img.shields.io/twitter/follow/MarcSkovMadsen.svg?style=social)](https://twitter.com/MarcSkovMadsen)
 [![Follow on LinkedIn](https://img.shields.io/badge/linked-in-blue)](https://www.linkedin.com/in/marcskovmadsen)
 
-# 📈 Panel Highcharts
+# ✨Panel Highcharts
 
 We want to
 
@@ -68,7 +68,7 @@ If you are looking to contribute to this project you can find ideas in the [issu
 
 I would love to support and receive your contributions. Thanks.
 
-[![Hacktober Fest](https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?fit=1200%2C630)](https://github.com/awesome-panel/awesome-panel-cli/issues).
+[![Hacktober Fest](https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?fit=1200%2C630)](https://github.com/awesome-panel/panel-highcharts/issues).
 
 ## Monitor
 
